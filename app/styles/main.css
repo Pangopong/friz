@@ -7,7 +7,6 @@
   padding: 0px;
   margin: 0px;
   border-bottom: 2px solid black;
-  --box-shadow: 0px 4px 15px 0px black;
   z-index: 0;
 }
 body{ 
@@ -70,17 +69,16 @@ html {
 
 /* Custom page footer */
 .footer {
-  color: #777;
+
   --border-top: 1px solid #e5e5e5;
-  /*
   padding-top: 19px;
-  background-color: black;
-  opacity: .4;
+  padding-bottom: 19px;
+  background-color: #262626;
+  --opacity: .4;
   color: silver; --#777
   border-top: 2px solid grey;
   position: relative;
   z-index: 999;
-  */
 }
 
 .container-narrow > hr {

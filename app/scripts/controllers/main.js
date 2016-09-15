@@ -8,14 +8,16 @@
  * Controller of the itsApp
  */
 angular.module('itsApp')
-  .controller('MainCtrl', function ($scope, $rootScope, $location) {
+  .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout) {
     $scope.viewTransition = function(){
-    	//setTimeout(function(){$location.path('/company')}, 2000);
     	
     	$scope.anim = "anim";
-    	console.log("button pressed");
+
+        function changeView(){$location.path('/company');}
+
+        $timeout(changeView, 3000);
     }
-    	//$location.path('/company');
+    	
 
 
     $rootScope.li1 = 'iactive';

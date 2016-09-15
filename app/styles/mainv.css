@@ -13,12 +13,9 @@
 }
 .carousel{
 	overflow: hidden;
-	--filter: grayscale(100%);
 	z-index: 99;
 }
 .carousel:hover{
-	--filter: grayscale(0);
-	--filter: saturate(250%);
 	animation-name: filter;
 	animation-duration: .3s;
 	--animation-iteration-count: infinite;
@@ -30,11 +27,6 @@
 }
 .carousel-indicators{
 	opacity: .4;
-}
-.carousel-indicators:hover{
-	--animation-name: indicator;
-	--animation-duration: 2s;
-	--animation-iteration-count: infinite;
 }
 .carousel-indicators .active{
 	background-color: #00ff00;
@@ -49,8 +41,9 @@
 	animation-iteration-count: infinite;
 }
 @keyframes indicator{
-	from {background-color: white;}
-	to {background-color: #00ff00;  }
+	0% {background-color: white;}
+	50% {background-color: #00ff00;}
+	100% {background-color: white;}
 }
 .container{
 	padding: 0px;
