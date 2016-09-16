@@ -12,5 +12,6 @@ angular.module('itsApp')
     
 
     $rootScope.li1 = 'iactive';
-    $rootScope.li2 = 'active';
+    $rootScope.li2 = 'iactive';
+    $rootScope.li3 = 'active';
   });
