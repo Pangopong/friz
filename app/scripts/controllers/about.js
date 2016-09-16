@@ -8,9 +8,9 @@
  * Controller of the itsApp
  */
 angular.module('itsApp')
-  .controller('CompanyCtrl', function ($rootScope, $scope) {
-    $rootScope.li1 = 'active';
+  .controller('AboutCtrl', function ($rootScope, $scope) {
+    $rootScope.li1 = 'iactive';
     $rootScope.li2 = 'iactive';
-    $rootScope.li3 = 'iactive';
+    $rootScope.li3 = 'active';
     $rootScope.li4 = 'iactive';
   });
