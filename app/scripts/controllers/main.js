@@ -17,7 +17,7 @@ angular.module('itsApp')
         function cancelAnim(){$rootScope.squash = "ani";}
 
         $timeout(changeView, 950);
-        $timeout(cancelAnim, 3000);
+        $timeout(cancelAnim, 1500);
 
         //document.getElementById("hidden") = 200;
     }

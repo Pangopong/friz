@@ -45,8 +45,8 @@
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
           <div class="container">
             <ul class="nav navbar-nav">
-              <li class={{li1}}><a ng-href="#/company">Company Profile</a></li>
-              <li class={{li2}}><a ng-href="#/">Contact</a></li>
+              <li class={{li1}} ng-click="viewTransition('/company');"><a>Company Profile</a></li>
+              <li class={{li2}} ng-click="viewTransition('/contact');"><a>Contact</a></li>
             </ul></div>
           </div>
         </div>
@@ -101,6 +101,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/company.js"></script>
+        <script src="scripts/controllers/contact.js"></script>
         <!-- endbuild -->
 </div>
 
