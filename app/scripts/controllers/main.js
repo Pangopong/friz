@@ -11,11 +11,13 @@ angular.module('itsApp')
   .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout) {
     $scope.viewTransition = function(loc){
     	
-    	$scope.anim = "anim";
+    	$rootScope.squash = "squash";
 
         function changeView(){$location.path(loc);}
+        function cancelAnim(){$rootScope.squash = "ani";}
 
         $timeout(changeView, 950);
+        $timeout(cancelAnim, 3000);
 
         //document.getElementById("hidden") = 200;
     }

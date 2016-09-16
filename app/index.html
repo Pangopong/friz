@@ -39,7 +39,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/"><div id="brand" ng-click="viewTransition('/');"></div></a>
+            <div class="navbar-brand"><div id="brand" ng-click="viewTransition('/');" ></div></div>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -54,8 +54,10 @@
       </div>
         </div>
 
+    <div class="view" style="animation-name:{{squash}};">    
     <div class="container">
     <div ng-view=""></div>
+    </div>
     </div>
 
     <div class="footer"> 

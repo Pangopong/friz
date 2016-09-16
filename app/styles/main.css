@@ -4,22 +4,30 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+  }
 body{ 
   background: url(../images/bg2.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+  }
+@keyframes squash{
+  0% {max-height: 710px;}
+  50% {max-height: 0px;}
+  100% {max-height: 710px;}
+  }
+.view{
+  animation-duration: 2s;
+  }
 .global{
   overflow: hidden;
   min-height: 700px;
   max-height: 1310px;
-}
+  }
 .container2{
   width:100%;
-}
+  }
 .navbar{
   border-style: none;
   background-color: #262626;
@@ -27,26 +35,26 @@ body{
   margin: 0px;
   border-bottom: 2px solid black;
   z-index: 0;
-}
+  }
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
-}
+  }
 #brand{
   position: relative;
   top:-7px;
-  --height:40px;
+  height:40px;
   width:35px;
   background-image: url(../images/minits.png);
   background-size: contain;
   background-repeat: no-repeat;
   opacity: .4;
-}
+  }
 #brand:hover{
   opacity: 1;
-}
+  }
 .banner{
   background-color: #262626;
   --background-image: url(../images/siglaits.png);
@@ -54,12 +62,12 @@ body{
   background-position: center;
   background-size: contain;
   box-shadow: 0px 55px 20px 0px black;
-}
+  }
 .header {
   display: block;
   margin: auto;
   margin-bottom: -15px;
-}
+  }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -67,7 +75,7 @@ body{
 .footer {
   padding-left: 0px;
   padding-right: 0px;
-}
+  }
 
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -75,50 +83,47 @@ body{
   margin-bottom: 0;
   line-height: 40px;
   --padding-bottom: 19px;
-}
+  }
 
 /* Custom page footer */
 .footer {
-  --overflow: hidden;
+  position: relative;
   height: 40px;
-
-  --border-top: 1px solid #e5e5e5;
   padding-top: 10px;
   background-color: #262626;
-  --opacity: .4;
   color: silver; --#777
   border-top: 2px solid grey;
-  position: relative;
   z-index: 999;
-}
+  }
 #hidden{
   background-color: #262626;
   position: relative;
   margin-bottom: -700px;
   width: 100%;
-  height: 300px;
-}
+  height: 3000px;
+  animation-duration: 2s;
+  }
 .container-narrow > hr {
   margin: 30px 0;
-}
+  }
 
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
-}
+  }
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
-}
+  }
 
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
-}
+  }
 .marketing p + h4 {
   margin-top: 28px;
-}
+  }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -143,5 +148,10 @@ body{
   }
   #brand{
     height: 40px;
+  }
+  .global{
+  overflow: hidden;
+  min-height: 1000px;
+  max-height: 1310px;
   }
 }
