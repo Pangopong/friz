@@ -1,3 +1,22 @@
+html { 
+  background: url(../images/bg2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body{ 
+  background: url(../images/bg2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.global{
+  overflow: hidden;
+  min-height: 700px;
+  max-height: 1310px;
+}
 .container2{
   width:100%;
 }
@@ -9,13 +28,6 @@
   border-bottom: 2px solid black;
   z-index: 0;
 }
-body{ 
-  background: url(../images/bg2.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -25,28 +37,30 @@ body{
 #brand{
   position: relative;
   top:-7px;
-  height:35px;
-  width:90px;
-  --background-image: url(../images/siglaits.png);
-  background-size:cover;
+  --height:40px;
+  width:35px;
+  background-image: url(../images/minits.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: .4;
+}
+#brand:hover{
+  opacity: 1;
 }
 .banner{
-  height:500px;
   background-color: #262626;
-  background-image: url(../images/siglait.png);
+  --background-image: url(../images/siglaits.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   box-shadow: 0px 55px 20px 0px black;
 }
+.header {
+  display: block;
+  margin: auto;
+  margin-bottom: -15px;
 }
-html { 
-  background: url(../images/bg2.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -55,10 +69,6 @@ html {
   padding-right: 0px;
 }
 
-/* Custom page header */
-.header {
-  --height: 500px;
-}
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
@@ -69,10 +79,11 @@ html {
 
 /* Custom page footer */
 .footer {
+  --overflow: hidden;
+  height: 40px;
 
   --border-top: 1px solid #e5e5e5;
-  padding-top: 19px;
-  padding-bottom: 19px;
+  padding-top: 10px;
   background-color: #262626;
   --opacity: .4;
   color: silver; --#777
@@ -80,7 +91,13 @@ html {
   position: relative;
   z-index: 999;
 }
-
+#hidden{
+  background-color: #262626;
+  position: relative;
+  margin-bottom: -700px;
+  width: 100%;
+  height: 300px;
+}
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -123,5 +140,8 @@ html {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+  #brand{
+    height: 40px;
   }
 }

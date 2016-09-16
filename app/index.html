@@ -15,15 +15,17 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="itsApp">
+  <body ng-app="itsApp" ng-controller='MainCtrl'>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-        <div class='container2'>
+    <div class="global">
+
+      <div class='container2'>
         <div class="banner">
-          <div class="header"></div>
+          <img src="images/siglaits.png" class="header">
         </div>
           <div class="containe">
         <div class="navbar navbar-inverse" role="navigation" style="border-radius: 0px;">
@@ -37,7 +39,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/"><div id="brand"></div></a>
+            <a class="navbar-brand" href="#/"><div id="brand" ng-click="viewTransition('/');"></div></a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -56,10 +58,13 @@
     <div ng-view=""></div>
     </div>
 
-    <div class="footer" style="animation-name:{{animFooter}};"> 
+    <div class="footer"> 
       <div class="container">
         FOOTER
       </div>
+
+      <div id="hidden"></div>
+      
     </div>
 
 
@@ -95,5 +100,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/company.js"></script>
         <!-- endbuild -->
+</div>
+
 </body>
 </html>

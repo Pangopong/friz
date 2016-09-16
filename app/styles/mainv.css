@@ -1,10 +1,9 @@
 #mainv{
-	overflow: hidden;
+	--overflow: hidden;
     box-shadow: 0px 10px 20px 10px black;
     z-index: 98;
     color: white;
   	animation-duration: 2s;
-  	animation-iteration-count: infinite;
 }
 @keyframes anim{
   0% {height: 710px;}
@@ -47,7 +46,8 @@
 }
 .container{
 	padding: 0px;
-	max-width: 1080px;
+	--max-width: 1080px;
+	max-width: 900px;
 }
 .text2{
   	text-shadow:-1.5px -1.5px 0 #000,  

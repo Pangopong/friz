@@ -9,13 +9,15 @@
  */
 angular.module('itsApp')
   .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout) {
-    $scope.viewTransition = function(){
+    $scope.viewTransition = function(loc){
     	
     	$scope.anim = "anim";
 
-        function changeView(){$location.path('/company');}
+        function changeView(){$location.path(loc);}
 
-        $timeout(changeView, 3000);
+        $timeout(changeView, 950);
+
+        //document.getElementById("hidden") = 200;
     }
     	
 
