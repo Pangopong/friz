@@ -17,16 +17,25 @@ body{
   50% {max-height: 0px;}
   100% {max-height: 710px;}
   }
+.navbar-inverse .navbar-nav > a:hover{
+  background-color: #595959;
+}
+.navbar-inverse .navbar-nav > .active > a{
+    color: silver;
+    background-color: #595959;
+}
+/*
+.navbar-inverse .navbar-nav > .active > a:focus{
+  background-color: transparent;
+}*/
 .view{
   animation-duration: 2s;
   }
 .global{
   overflow: hidden;
   min-height: 700px;
-  max-height: 1310px;
-  }
-.container2{
-  width:100%;
+  --max-height: 1310px;
+  --max-height: auto;
   }
 .navbar{
   border-style: none;
@@ -35,6 +44,13 @@ body{
   margin: 0px;
   border-bottom: 2px solid black;
   z-index: 0;
+
+  text-shadow:-1.5px -1.5px 0 #000,  
+    1.5px -1.5px 0 #000,
+    -1.5px 1.5px 0 #000,
+    1.5px 1.5px 0 #000;
+
+  font-family: black ops one;
   }
 .browsehappy {
   margin: 0.2em 0;
@@ -92,7 +108,7 @@ body{
   padding-top: 10px;
   background-color: #262626;
   color: silver; --#777
-  border-top: 2px solid grey;
+  border-top: 0px solid grey;
   z-index: 999;
   }
 #hidden{
@@ -128,7 +144,7 @@ body{
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    --max-width: 730px;
   }
 
   /* Remove the padding we set earlier */
@@ -152,6 +168,6 @@ body{
   .global{
   overflow: hidden;
   min-height: 1000px;
-  max-height: 1310px;
+  --max-height: 1310px;
   }
 }

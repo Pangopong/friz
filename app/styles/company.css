@@ -1,7 +1,14 @@
 .company{
-	--webkit-text-stroke: .5px black;
-	height:500px;
+	margin-bottom: 0px;
 	background-image: url(../images/paper.jpg);
-    box-shadow: 0px 10px 20px 10px black;
+	background-size: fill;
 	color: black;
+	font-family: pacifico;
+    box-shadow: 0px 10px 20px 10px black;
+    padding: 2px;
+}
+h1{
+	font-family: Sacramento;
+	margin: 0px;
+	font-weight: bold;
 }
