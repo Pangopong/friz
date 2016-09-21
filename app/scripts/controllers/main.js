@@ -21,7 +21,29 @@ angular.module('itsApp')
 
         //document.getElementById("hidden") = 200;
     }
-    	
+    $scope.cbtn = function(btn){
+        console.log('btn' + btn + 'pressed');
+        if(btn == 1){
+            $("#detail2").collapse('hide');
+            $("#detail3").collapse('hide');
+            $("#detail4").collapse('hide');
+        }
+        else if(btn == 2){
+            $("#detail").collapse('hide');
+            $("#detail3").collapse('hide');
+            $("#detail4").collapse('hide');
+        }
+        else if(btn == 3){
+            $("#detail").collapse('hide');
+            $("#detail2").collapse('hide');
+            $("#detail4").collapse('hide');
+        }
+        else if(btn == 4){
+            $("#detail1").collapse('hide');
+            $("#detail2").collapse('hide');
+            $("#detail3").collapse('hide');
+        }
+    }	
 
 
     $rootScope.li1 = 'iactive';

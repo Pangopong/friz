@@ -9,16 +9,17 @@
 .carousel{
 	overflow: hidden;
 	z-index: 99;
+	box-shadow: 0px 7px 20px 2px black;
 }
-.carousel:hover{
+.carousel:hover img{
 	animation-name: filter;
 	animation-duration: .3s;
 	--animation-iteration-count: infinite;
 	animation-fill-mode: forwards;
 }
 @keyframes filter{
-	from {filter: greyscale(0);}
-	to {filter: saturate(250%);}
+	from {filter: greyscale(0); transform: scale(1);}
+	to {filter: saturate(250%); transform: scale(1.1);}
 }
 .carousel-indicators{
 	opacity: .4;
@@ -45,24 +46,29 @@
 	--max-width: 1080px;
 	--max-width: 900px;
 }
+h1{
+	font-size: 10px;
+}
+
 .text1{
 	position: absolute;
-	top:20px;
+	top: -20px;
 	left: 50%;
-  	text-shadow:-1.5px -1.5px 0 #000,  
-    1.5px -1.5px 0 #000,
-    -1.5px 1.5px 0 #000,
-    1.5px 1.5px 0 #000;
+	width: 50%;
+    font-size: 10px;
 
 }
 .text2{
-  	text-shadow:-1.5px -1.5px 0 #000,  
-    1.5px -1.5px 0 #000,
-    -1.5px 1.5px 0 #000,
-    1.5px 1.5px 0 #000;
 	position: absolute;
 	top:0px;
 	left: 50px;
+	width: 50%;
+	font-size: 10px;
+}
+.text3{
+	position: absolute;
+	top: 0px;
+	left: 50%;
 }
 .item{
 	background-color: rgba(0,0,0, 0.7);
@@ -74,18 +80,75 @@
 }
 .img2{
 	position: relative;
-	left: 100px;
+	--left: 50px;
 }
 .img3{
 	position: relative;
-	left: 200px;
+	left: -200px;
 }
 .img4{
 }
+.detail{
+	background-color: #404040;
+	padding-top: 15px;
+}
+.detail p{
+	position: relative;
+	margin: 0px;
+	margin-left: 15px;
+	margin-right: 15px; 
+	color: black;
+	font-family: russo one;
+	--font-size: 44px;
+
+	width: 50%;
+}
+.detail h2{
+	position: relative;
+	margin-left: 15px;
+	color: black
+}
+.detail a span{
+	position: relative;
+	width: 100%;
+	color: #404040;
+	background-color: #262626;
+	font-size: 36px;
+	text-align: center;
+
+	animation-name: collapse;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+@keyframes collapse{
+	0% {transform: translateY(20px);}
+	50%{transform: translateY(0px);}
+	100%{transform: translateY(20px);}
+}
+
+
 @media screen and (min-width: 925px){
-	.carousel{
+  .carousel{
   	height: 450px;
   }
+  h1{
+  	margin: 0px;
+  	font-size: 40px;
+  }
+  .text1{
+	position: absolute;
+	top:20px;
+	left: 50%;
+	width: 50%;
+    font-size: 16px;
+ }
+  .text2{
+	position: absolute;
+	top:0px;
+	left: 50px;
+	width: 50%;
+	font-size: 16px;
+ }
   .img1{
 	position: relative;
 	top: -150px;
@@ -93,11 +156,12 @@
  }
   .img2{
 	position: relative;
-	left: 150px;
+	top:-150px;
+	left: 100px;
  }
   .img3{
 	position: relative;
-	left: 300px;
+	left: -800px;
  }
   .img4{
 	position: relative;
@@ -107,4 +171,21 @@
     --max-width: 730px;
     width: 100%;
   }
+}
+@media screen and (max-width: 575px){
+.text1{
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	width: 50%;
+    font-size: 2px;
+
+}
+.text2{
+	position: absolute;
+	top:-22px;
+	left: 50px;
+	width: 50%;
+	font-size: 2px;
+}
 }
