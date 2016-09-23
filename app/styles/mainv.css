@@ -179,6 +179,13 @@ h1{
     width: 100%;
   }
 }
+@media screen and (min-width: 1440px){
+	.img1{
+		position: relative;
+		top: -300px;
+		left: -500px;
+	}
+}
 @media screen and (max-width: 575px){
 .text1{
 	position: absolute;
