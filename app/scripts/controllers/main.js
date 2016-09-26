@@ -44,8 +44,20 @@ angular.module('itsApp')
             $("#detail3").collapse('hide');
         }
     }	
-
-
+    $(document).ready(function(){
+    $("#owl-example").owlCarousel({
+      autoPlay: true,
+      navigation : false, // Show next and prev buttons
+      pagination: false,
+      singleItem: true,
+      items: 1,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true,
+      autoHeight: true,
+      itemsScaleUp: true
+  });
+});
     $rootScope.li1 = 'iactive';
     $rootScope.li2 = 'iactive';
     $rootScope.li3 = 'iactive';

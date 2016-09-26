@@ -66,10 +66,10 @@ body{
   background-image: url(../images/minits.png);
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: .4;
+  --opacity: .4;
   }
 #brand:hover{
-  opacity: 1;
+  opacity: .4;
   }
 .banner{
   background-color: #262626;

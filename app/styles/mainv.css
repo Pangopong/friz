@@ -6,6 +6,15 @@
   	animation-duration: 2s;
   	font-family: audiowide;
 }
+
+
+#owl-example .item{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
 .carousel{
 	overflow: hidden;
 	z-index: 99;
@@ -86,8 +95,6 @@ h1{
 	position: relative;
 	left: -500px;
 }
-.img4{
-}
 .detail{
 	background-color: #404040;
 	padding-top: 15px;
@@ -128,6 +135,10 @@ h1{
 
 
 @media screen and (min-width: 925px){
+  #owl-example{
+  	height: 450px;
+  	overflow: hidden;
+  }
   .carousel{
   	height: 450px;
   }
@@ -170,10 +181,6 @@ h1{
 	position: relative;
 	left: -800px;
  }
-  .img4{
-	position: relative;
-	top: -300px;
- }
  .container {
     --max-width: 730px;
     width: 100%;
@@ -209,4 +216,14 @@ h1{
 	width: 50%;
 	font-size: 2px;
 }
+/*
+.img1{
+	width: 200px;
+}
+.img2{
+	width: 200px;
+}
+.img3{
+	width: 200px;
+}*/
 }
