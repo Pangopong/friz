@@ -1,16 +1,17 @@
 .company{
 	margin-bottom: 0px;
-	background-image: url(../images/paper.jpg);
+	background-color: #262626;
+	--background-image: url(../images/paper.jpg);
 	background-size: fill;
 	color: black;
-	font-family: pacifico;
+	font-family: orbitron;
     box-shadow: 0px 10px 20px 10px black;
     padding: 15px;
 }
 h1{
 	position: relative;
 	--left: 40%;
-	font-family: Sacramento;
+	font-family: orbitron;
 	margin: 0px;
 	font-weight: bold;
 }

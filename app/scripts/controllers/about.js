@@ -10,7 +10,6 @@
 angular.module('itsApp')
   .controller('AboutCtrl', function ($rootScope, $scope) {
     $rootScope.li1 = 'iactive';
-    $rootScope.li2 = 'iactive';
-    $rootScope.li3 = 'active';
-    $rootScope.li4 = 'iactive';
+    $rootScope.li2 = 'active';
+    $rootScope.li3 = 'iactive';
   });

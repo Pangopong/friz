@@ -61,5 +61,4 @@ angular.module('itsApp')
     $rootScope.li1 = 'iactive';
     $rootScope.li2 = 'iactive';
     $rootScope.li3 = 'iactive';
-    $rootScope.li4 = 'iactive';
   });
