@@ -1,7 +1,17 @@
 .about{
 	background-color: #262626;
+	color: grey;
 	font-family: orbitron;
 }
-#detail{
+p{
+	margin: 0px;
+}
+h2{
+	margin: 0px;
+}
+.play1{
+	width: 100%;
+}
+.collapse{
 	height: 1000px;
 }
