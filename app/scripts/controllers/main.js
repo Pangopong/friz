@@ -50,7 +50,6 @@ angular.module('itsApp')
       navigation : false, // Show next and prev buttons
       pagination: false,
       singleItem: true,
-      items: 1,
       slideSpeed : 300,
       paginationSpeed : 400,
       singleItem:true,
