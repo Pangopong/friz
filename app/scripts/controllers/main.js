@@ -12,9 +12,9 @@ angular.module('itsApp')
     $scope.viewTransition = function(loc){
     	
     	$rootScope.squash = "squash";
-
+      $rootScope.shadow = "none";
         function changeView(){$location.path(loc);}
-        function cancelAnim(){$rootScope.squash = "ani";}
+        function cancelAnim(){$rootScope.squash = "ani"; $rootScope.shadow = "0px 7px 20px 7px black";}
 
         $timeout(changeView, 950);
         $timeout(cancelAnim, 1500);
