@@ -4,6 +4,10 @@
 	color: grey;
 	font-family: orbitron;
 	--padding: 15px;
+
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAXCAMAAABDEo1gAAAALVBMVEUREREMDAwSEhIUFBQQEBAODg4TExMPDw8XFxcVFRUWFhYNDQ0LCwsKCgoJCQmoaA8gAAAB5klEQVR42k2TW4IkIQgEUUQLofb+x91At2b2x1eFaZJ0i7TWdTQTnastfaa1ob4lQraPlmtvy5z7nGvR7h5vyjMDfjOKF+2lYk1UlnjRiAh0X12SeTR4Lx2D1s48Z9Rjl0ZEZGvL0HloWZyin4mTzOz76Y31R6dwN7LJ3tCd8/LTGV0zl47pnScv3eBiYIa3cdt1+uWn1TGu6wH4S8cIobBaYrtT97r8o+htaj843KFld+EuG0ZE4+WrkufNba6Tr/3QruKH58VAxzImfHIX6qsD+gQrNmRCVlbF06kw+JapeyT0l0m1i+aEmBZvgoB115PPCPO5PnpDR4vpqyXVoZxv872K1Bq1/5eQznKyiu/GDE+SBR5+ROj+6BxYq0b5oKxnivIBAYdekHL8yEc3eXh6eVeOTR9BNdCHZpTMUB/RLo1lmy4LO2UdXvQE3W/Yau/bH/noMZHsvjUqqt7SxHBkR06XyVzMv5ncpPRkiusgGSt9FntmmjrcR1PShDdc0BLD2BLWuBhR1zPHvyKKdjKx0+PjIA1XgrJd/1OF/taCYqHJ7g3Xo6fQqh3cWbHHwukv9LPaCy2sjxnUjjaD+DPy8OvyydcK4v4Gi65uNuiZf5rgINhdfb9/DLF+aS/6sXjtRiB/AetLF9OdGDz6AAAAAElFTkSuQmCC") !important;
+  	background-repeat: repeat !important;
+  	background-color: #181818 !important;
 }
 .about p{
 	padding-left: 15px;
