@@ -51,7 +51,7 @@ body{
   }
 .global{
   overflow: hidden;
-  min-height: 700px;
+  min-height: 1000px;
   --max-height: 1310px;
   --max-height: auto;
   }
@@ -153,7 +153,12 @@ body{
   }
   .global{
   overflow: hidden;
-  min-height: 1000px;
+  min-height: 1100px;
   --max-height: 1310px;
+  }
+}
+@media screen and (max-width: 560px){
+  .global{
+    min-height: 700px;
   }
 }

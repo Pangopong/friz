@@ -12,9 +12,13 @@
     display: block;
     width: 100%;
     height: auto;
+    --box-shadow: 0px 7px 20px 2px black;
 }
 
-/*CAROUSEL*/
+#owl-example{
+	box-shadow: 0px 7px 20px 2px black;
+}
+/*CAROUSEL
 .carousel{
 	overflow: hidden;
 	z-index: 99;
@@ -25,10 +29,6 @@
 	animation-duration: .3s;
 	--animation-iteration-count: infinite;
 	animation-fill-mode: forwards;
-}
-@keyframes filter{
-	from {filter: greyscale(0); transform: scale(1);}
-	to {filter: saturate(250%); transform: scale(1.1);}
 }
 .carousel-indicators{
 	opacity: .4;
@@ -44,6 +44,10 @@
 	animation-name: indicator;
 	animation-duration: .5s;
 	animation-iteration-count: infinite;
+}*/
+@keyframes filter{
+	from {filter: greyscale(0); transform: scale(1);}
+	to {filter: saturate(250%); transform: scale(1.1);}
 }
 @keyframes indicator{
 	0% {background-color: white;}
@@ -85,17 +89,21 @@ h1{
 	background-color: rgba(0,0,0, 0.7);
 	overflow: hidden;
 }
+
 .img1{
 	position: relative;
+	width: 75%;
 	left: -100px;
 }
 .img2{
 	position: relative;
-	--left: 50px;
+	width: 75%;
+	left: 300px;
 }
 .img3{
 	position: relative;
-	left: -500px;
+	width: 75%;
+	left: -30%;
 }
 .detail{
 	background-color: #404040;
@@ -150,12 +158,12 @@ h1{
 
 @media screen and (min-width: 925px){
   #owl-example{
-  	height: 450px;
+  	max-height: 550px;
   	overflow: hidden;
   }
-  .carousel{
+ /* .carousel{
   	height: 450px;
-  }
+  }*/
   h1{
   	margin: 0px;
   	font-size: 40px;
@@ -183,16 +191,19 @@ h1{
  }
   .img1{
 	position: relative;
+	width: 100%;
 	top: -150px;
 	left: -200px;
  }
   .img2{
 	position: relative;
+	width: 100%;
 	top:-150px;
 	left: 100px;
  }
   .img3{
 	position: relative;
+	width: 100%;
 	left: -800px;
  }
  .container {
@@ -213,7 +224,7 @@ h1{
 	top: -20px;
 	left: 50%;
 	width: 50%;
-    font-size: 2px;
+    font-size: 7px;
 
 }
 .text2{
@@ -221,23 +232,28 @@ h1{
 	top:-22px;
 	left: 50px;
 	width: 50%;
-	font-size: 2px;
+	font-size: 7px;
 }
 .text3{
 	position: absolute;
 	top:-22px;
 	left: 50%;
 	width: 50%;
-	font-size: 2px;
+	font-size: 7px;
 }
-/*
+
 .img1{
-	width: 200px;
+	position: relative;
+	width: 100%;
 }
 .img2{
-	width: 200px;
+	position: relative;
+	width: 100%;
+	left: 5%;
 }
 .img3{
-	width: 200px;
-}*/
+	position: relative;
+	width: 100%;
+	left: -60%;
+}
 }
