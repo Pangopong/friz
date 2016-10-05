@@ -1,8 +1,9 @@
-<div class='container' id='mainv' ng-controller='MainCtrl'>
+<div class='container' id='mainv'>
 <link rel="stylesheet" href="../styles/mainv.css">
 
-<section id="carousel">
+<section id="carousel" ng-controller='MainCtrl'>
 <link rel="stylesheet" type="text/css" href="../styles/carousel.css">
+<!--
 <div id="owl-example" class="owl-carousel">
   <div class="item"> 
   <a data-toggle="collapse" data-target="#detail" ng-click="cbtn(1);">
@@ -54,16 +55,16 @@
         </span>
         </a>
   </div>
-</div>
-<!--
+</div>-->
+
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000" >
-  
+  <!--
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
+  </ol>-->
 
   
   <div class="carousel-inner" role="listbox">
@@ -122,10 +123,7 @@
         </a>
     </div>
 
-  </div>
-  
-
-  <!-- Left and right controls
+ <!-- Left and right controls-->
   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -133,7 +131,12 @@
   <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
-  </a>-->
+  </a>
+
+  </div>
+  
+
+ 
 
 <div id="detail" class="collapse detail">
 <h2>Features</h2>
@@ -177,7 +180,7 @@ Synchronized REPLAY function using GIS, video and voice records<br><br>
 Together with C.S.R. (Centrul pentru Servicii de Radio-comunicaţii), one of the well known system integrator on the Romanian market, the IT Safesea has been implemented at Romanian Naval Authority, for Constanza harbor.<br>
 </p>
 <a href="">
-<span class="glyphicon glyphicon-chevron-up" data-toggle='collapse' data-target='#detail'></span>
+<span class="glyphicon glyphicon-chevron-up" data-toggle='collapse' data-target='#detail' ng-click="cbtn(4);"></span>
 </a>
 </div>
 <div id="detail2" class="collapse detail">
@@ -294,7 +297,7 @@ Electronic Card Solution provides all necessary elements for a complete integrat
 <h2>Main Reference: Lukoil Downstream Romania</h2>
 
 <a href="">
-<span class="glyphicon glyphicon-chevron-up" data-toggle='collapse' data-target='#detail2'></span></a>
+<span class="glyphicon glyphicon-chevron-up" data-toggle='collapse' data-target='#detail2' ng-click="cbtn(4);"></span></a>
 </div>
 <div id="detail3" class="collapse detail">
 
@@ -358,19 +361,22 @@ Browser-based user interface;
 Flexible and robust solution.
 </p>
 <a href="">
-<span class="glyphicon glyphicon-chevron-up" data-toggle='collapse' data-target='#detail3'></span></a>
+<span class="glyphicon glyphicon-chevron-up" data-toggle='collapse' data-target='#detail3' ng-click="cbtn(4);"></span></a>
 </div>
-<div style="height: 300px;">
-      
-</div>
+
 </section>
 
-<section id='profile'>
-  <link rel="stylesheet" type="text/css" href="../styles/profile.css">
+<div id="break1" style="animation-name: {{shrink}}">
+      
+</div>
+
+<section id='section2' ng-controller="SectionCtrl2">
+  <link rel="stylesheet" type="text/css" href="../styles/section2.css">
 
     <div>
       
     </div>
+
 </section>
 
 

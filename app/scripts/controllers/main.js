@@ -22,28 +22,34 @@ angular.module('itsApp')
         //document.getElementById("hidden") = 200;
     }
     $scope.cbtn = function(btn){
-        console.log('btn' + btn + 'pressed');
+      
+      
+
+        console.log('btn: ' + btn + ' pressed');
+
+        $rootScope.shrink = "shrink";
+
+        if ($('#detail').attr('aria-expanded') == "true" &&  btn == 1) $rootScope.shrink = "ani";
+        else if ($('#detail2').attr('aria-expanded') == "true" &&  btn == 2) $rootScope.shrink = "ani";
+        else if ($('#detail3').attr('aria-expanded') == "true" &&  btn == 3) $rootScope.shrink = "ani";
+
         if(btn == 1){
             $("#detail2").collapse('hide');
             $("#detail3").collapse('hide');
-            $("#detail4").collapse('hide');
         }
         else if(btn == 2){
             $("#detail").collapse('hide');
             $("#detail3").collapse('hide');
-            $("#detail4").collapse('hide');
         }
         else if(btn == 3){
             $("#detail").collapse('hide');
             $("#detail2").collapse('hide');
-            $("#detail4").collapse('hide');
         }
         else if(btn == 4){
-            $("#detail1").collapse('hide');
-            $("#detail2").collapse('hide');
-            $("#detail3").collapse('hide');
+            $rootScope.shrink = "ani";
         }
     }	
+   
     $(document).ready(function(){
     $("#owl-example").owlCarousel({
       autoPlay: true,
@@ -56,6 +62,7 @@ angular.module('itsApp')
       autoHeight: true,
       itemsScaleUp: true
   });
+    
 });
     $rootScope.li1 = 'iactive';
     $rootScope.li2 = 'iactive';
