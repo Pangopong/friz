@@ -1,4 +1,12 @@
 #section2{
+	padding: 15px;
 	background-color: #009688;
 	height: 910px;
+}
+#section2 p{
+	padding: 0px;
+	margin: 0px;
+	width: 60%;
+	
+	font-size: 25px;
 }
