@@ -9,6 +9,7 @@
  */
 angular.module('itsApp')
   .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout) {
+    $('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '-50px');});
     $scope.viewTransition = function(loc){
     	
     	$rootScope.squash = "squash";

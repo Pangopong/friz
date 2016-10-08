@@ -20,7 +20,15 @@ body{
  :focus{
     outline: none;
   }
+#navTrigger{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  --background-color: cyan; 
+}
 .navbar{
+  top: -50px;
   border-style: none;
   background-color: #262626;
   padding: 0px;
@@ -34,6 +42,9 @@ body{
 
   font-family: black ops one;
   }
+.navbar:hover{
+  top:0px;
+}
 .navbar-inverse .navbar-nav > a:hover{
   background-color: #595959;
 }
@@ -112,7 +123,16 @@ body{
   z-index: 999;
 
   box-shadow: 0px 7px 20px 7px black;
-  }
+ }
+.footer img{
+  position: absolute;
+  top: 0px;
+  left: 1px;
+  width: 100px;
+  height: 70px;
+  margin: 0px;
+  margin-left: 5px;
+}
 #hidden{
   background-color: #262626;
   position: relative;
@@ -129,7 +149,7 @@ body{
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    --max-width: 730px;
+    width: 100%;
   }
 
   /* Remove the padding we set earlier */

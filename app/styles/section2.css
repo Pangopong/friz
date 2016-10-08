@@ -1,7 +1,7 @@
 #section2{
 	padding: 15px;
-	background-color: #009688;
-	--height: 910px;
+	background-color: #262626; /*#009688;*/
+	color: red;
 }
 #section2 p{
 	padding: 0px;
