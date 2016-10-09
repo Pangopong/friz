@@ -157,15 +157,18 @@
 
 
 @keyframes shrink{
-	from{height: 250px;}
+	from{height: 200px;}
 	to{height: 0px;}
 }
 #break1{
-	height: 300px;
+	height: 200px;
 
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
 }
+
+
+
 
 @media screen and (min-width: 925px){
   /*
