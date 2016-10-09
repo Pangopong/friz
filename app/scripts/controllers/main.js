@@ -28,11 +28,11 @@ angular.module('itsApp')
 
         console.log('btn: ' + btn + ' pressed');
 
-        $rootScope.shrink = "shrink";
+        $('#break1').css('animation-name', 'shrink');
 
-        if ($('#detail').attr('aria-expanded') == "true" &&  btn == 1) $rootScope.shrink = "ani";
-        else if ($('#detail2').attr('aria-expanded') == "true" &&  btn == 2) $rootScope.shrink = "ani";
-        else if ($('#detail3').attr('aria-expanded') == "true" &&  btn == 3) $rootScope.shrink = "ani";
+        if ($('#detail').attr('aria-expanded') == "true" &&  (btn == 1 || btn == 4)) $('#break1').css('animation-name', 'ani');
+        else if ($('#detail2').attr('aria-expanded') == "true" &&  (btn == 2 || btn == 4)) $('#break1').css('animation-name', 'ani');
+        else if ($('#detail3').attr('aria-expanded') == "true" &&  (btn == 3 || btn == 4)) $('#break1').css('animation-name', 'ani');
 
         if(btn == 1){
             $("#detail2").collapse('hide');
@@ -47,7 +47,7 @@ angular.module('itsApp')
             $("#detail2").collapse('hide');
         }
         else if(btn == 4){
-            $rootScope.shrink = "ani";
+           // $('#break1').css('animation-namei', 'ani');
         }
     }	
    
