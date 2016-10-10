@@ -1,7 +1,10 @@
 #section2{
+	position: relative;
 	padding: 15px;
 	background-color: #262626; /*#009688;*/
 	color: red;
+	height: 100vh;
+	z-index: 1;
 }
 #section2 p{
 	padding: 0px;
@@ -10,7 +13,6 @@
 	
 	font-size: 25px;
 }
-
 #rotateTest{
 	background-color: cyan;
 	border: 3px solid black;
