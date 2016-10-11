@@ -3,7 +3,7 @@
 	padding: 15px;
 	background-color: #262626; /*#009688;*/
 	color: red;
-	height: 100vh;
+	min-height: 100vh;
 	z-index: 1;
 }
 #section2 p{
@@ -13,13 +13,9 @@
 	
 	font-size: 25px;
 }
-#rotateTest{
-	background-color: cyan;
-	border: 3px solid black;
-	height: 60px;
-	width: 700px;
-	transform: rotate(30deg);
-}
-#rotateTest:hover{
-	background-color: purple;
+
+@media screen and (max-width: 684px){
+	#section2 p{
+		font-size: 12px;
+	}
 }

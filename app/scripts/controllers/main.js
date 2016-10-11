@@ -9,7 +9,12 @@
  */
 angular.module('itsApp')
   .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout) {
+   
     $('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '0px');});
+    
+    AOS.init({duration: 3000});
+
+
     $scope.viewTransition = function(loc){
     	
     	$rootScope.squash = "squash";
@@ -51,20 +56,7 @@ angular.module('itsApp')
         }
     }	
    
-    $(document).ready(function(){
-    $("#owl-example").owlCarousel({
-      autoPlay: true,
-      navigation : false, // Show next and prev buttons
-      pagination: false,
-      singleItem: true,
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true,
-      autoHeight: true,
-      itemsScaleUp: true
-  });
     
-});
     $rootScope.li1 = 'iactive';
     $rootScope.li2 = 'iactive';
     $rootScope.li3 = 'iactive';

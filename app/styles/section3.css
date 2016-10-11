@@ -6,7 +6,8 @@
 
 #section3 #leftHalf{
 	position: relative;
-	left: -50%;
+	top: 25%;
+	left: -70%;
 	background-color: green;
 	border: 3px solid black;
 	width: 100vw;
