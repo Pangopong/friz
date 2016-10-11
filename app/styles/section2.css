@@ -5,6 +5,7 @@
 	color: red;
 	min-height: 100vh;
 	z-index: 1;
+	box-shadow: 0px -4px 5px 0px black;
 }
 #section2 p{
 	padding: 0px;
