@@ -9,7 +9,7 @@
  */
 angular.module('itsApp')
   .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout) {
-    $('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '-50px');});
+    $('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '0px');});
     $scope.viewTransition = function(loc){
     	
     	$rootScope.squash = "squash";
@@ -27,13 +27,13 @@ angular.module('itsApp')
       
 
         console.log('btn: ' + btn + ' pressed');
-
+        /*
         $('#break1').css('animation-name', 'shrink');
 
         if ($('#detail').attr('aria-expanded') == "true" &&  (btn == 1 || btn == 4)) $('#break1').css('animation-name', 'ani');
         else if ($('#detail2').attr('aria-expanded') == "true" &&  (btn == 2 || btn == 4)) $('#break1').css('animation-name', 'ani');
         else if ($('#detail3').attr('aria-expanded') == "true" &&  (btn == 3 || btn == 4)) $('#break1').css('animation-name', 'ani');
-
+        */
         if(btn == 1){
             $("#detail2").collapse('hide');
             $("#detail3").collapse('hide');

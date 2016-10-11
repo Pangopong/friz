@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Aldrich|Audiowide|Black+Ops+One|Dancing+Script|Fugaz+One|Homemade+Apple|Lobster|Orbitron|Oswald|Pacifico|Quantico|Roboto+Slab|Russo+One|Sacramento|Special+Elite|Vollkorn|Yatra+One" rel="stylesheet">
     <!-- endbuild -->
   </head>
-  <body ng-app="itsApp" ng-controller='MainCtrl'>
+  <body ng-app="itsApp" ng-controller='MainCtrl' class="scroll-area" data-spy="scroll" data-target=".navbar" data-offset="50">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -54,9 +54,12 @@
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
           <div class="container">
             <ul class="nav navbar-nav">
-              <li class={{li1}} ng-click="viewTransition('/company');"><a>Company Profile</a></li>
-              <li class={{li2}} ng-click="viewTransition('/about');"><a>Press Talk</a></li>
-              <li class={{li3}} ng-click="viewTransition('/contact');"><a>Contact</a></li>
+              <li><a href="#section1">Products</a></li>
+              <li><a href="#section2">Company Profile</a></li>
+              <li><a href="#section3">Details</a></li>
+              <li><a href="#section4">Contact</a>
+              <li ng-click="viewTransition('/company');"><a>Profile(DEPR)</a></li>
+              <li ng-click="viewTransition('/about')"><a>Press Talk(DEPR)</a></li>
             </ul></div>
           </div>
         </div>
