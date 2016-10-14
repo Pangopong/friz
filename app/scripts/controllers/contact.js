@@ -11,7 +11,5 @@ angular.module('itsApp')
   .controller('ContactCtrl', function ($scope, $rootScope, $location, $timeout) {
     $scope.y = 5;
 
-    $rootScope.li1 = 'iactive';
-    $rootScope.li2 = 'iactive';
-    $rootScope.li3 = 'active';
+
   });

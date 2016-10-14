@@ -10,7 +10,7 @@
 angular.module('itsApp')
   .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout) {
    
-    $('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '0px');});
+    //$('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '0px');});
     
     AOS.init({duration: 3000});
 
@@ -27,18 +27,13 @@ angular.module('itsApp')
 
         //document.getElementById("hidden") = 200;
     }
+
+    //carousel 
     $scope.cbtn = function(btn){
       
       
 
         console.log('btn: ' + btn + ' pressed');
-        /*
-        $('#break1').css('animation-name', 'shrink');
-
-        if ($('#detail').attr('aria-expanded') == "true" &&  (btn == 1 || btn == 4)) $('#break1').css('animation-name', 'ani');
-        else if ($('#detail2').attr('aria-expanded') == "true" &&  (btn == 2 || btn == 4)) $('#break1').css('animation-name', 'ani');
-        else if ($('#detail3').attr('aria-expanded') == "true" &&  (btn == 3 || btn == 4)) $('#break1').css('animation-name', 'ani');
-        */
         if(btn == 1){
             $("#detail2").collapse('hide');
             $("#detail3").collapse('hide');
@@ -52,12 +47,13 @@ angular.module('itsApp')
             $("#detail2").collapse('hide');
         }
         else if(btn == 4){
-           // $('#break1').css('animation-namei', 'ani');
+
         }
     }	
    
-    
-    $rootScope.li1 = 'iactive';
-    $rootScope.li2 = 'iactive';
-    $rootScope.li3 = 'iactive';
+   //angular-scroll
+   $scope.scroll = function(){
+    $('body').scrollTo(400, 2000);
+   }
+
   });

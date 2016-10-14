@@ -9,7 +9,5 @@
  */
 angular.module('itsApp')
   .controller('CompanyCtrl', function ($rootScope, $scope) {
-    $rootScope.li1 = 'active';
-    $rootScope.li2 = 'iactive';
-    $rootScope.li3 = 'iactive';
+    
   });

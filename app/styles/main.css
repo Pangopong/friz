@@ -20,6 +20,9 @@ body{
  :focus{
     outline: none;
   }
+@viewport{
+  width: 500px;
+}
 #navTrigger{
   position: fixed;
   top: 0;
