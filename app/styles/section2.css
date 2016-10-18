@@ -14,9 +14,40 @@
 	
 	font-size: 25px;
 }
-
+	#cog1{
+		position: absolute; 
+		top: 2px; 
+		left: 75%; 
+		width: 200px
+	}
+	#cog2{
+		position: absolute; 
+		top: -140px; 
+		left: 75%; 
+		width: 150px;
+	}
+	#cogs{
+		position: relative;
+		top: -150px;
+	}
 @media screen and (max-width: 684px){
 	#section2 p{
 		font-size: 12px;
+		width: 75%;
+	}
+	#cog1{
+		width: 150px;
+	}
+	#cog2{
+		width: 110px;
+		top: -100px;
+	}
+	#cogs{
+		top: -50px;
+	}
+}
+@media screen and (min-width: 1920px){
+	#cogs{
+		top: 0px;
 	}
 }
