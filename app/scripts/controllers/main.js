@@ -8,11 +8,10 @@
  * Controller of the itsApp
  */
 angular.module('itsApp')
-  .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout) {
+  .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout, $window, $anchorScroll) {
    
     //$('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '0px');});
-    
-    AOS.init({duration: 3000});
+
 
 
     $scope.viewTransition = function(loc){
@@ -51,9 +50,14 @@ angular.module('itsApp')
         }
     }	
    
-   //angular-scroll
-   $scope.scroll = function(){
-    $('body').scrollTo(400, 2000);
+   //scroll()
+   $scope.scroll = function(targetId){
+    
+    $("body").animate({scrollTop: $(targetId).offset().top}, "slow");
+
    }
+       
+    AOS.init({duration: 3000});
+    $timeout(AOS.refresh,500);
 
   });
