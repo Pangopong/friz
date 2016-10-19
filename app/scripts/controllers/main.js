@@ -9,7 +9,7 @@
  */
 angular.module('itsApp')
   .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout, $window, $anchorScroll) {
-    var detailToggle = 0;
+    
     $('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '-50px');});
 
 
@@ -45,17 +45,12 @@ angular.module('itsApp')
             $("#detail").collapse('hide');
             $("#detail2").collapse('hide');
         }
-        else if(btn == 4){
-
-        }
     }	
    
    //scroll()
-   $scope.scroll = function(targetId){
-    
-    if(targetId === '#detail' || targetId === '#detail2' || targetId === '#detail3')
-    $timeout(function(){$("body").animate({scrollTop: $(targetId).offset().top}, "slow");}, 350);
-    else $("body").animate({scrollTop: $(targetId).offset().top}, "slow");
+   $scope.scroll = function(targetId, delay){
+
+    $timeout(function(){$("body").animate({scrollTop: $(targetId).offset().top}, "slow");}, delay);
     
    }
        
