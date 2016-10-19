@@ -20,7 +20,6 @@
     <img src="../images/cog.png" id='cog2'>
     </div>
     
-    <div ng-click='scroll("#section3");' style="position: relative; width: 50px; height: 50px; background-color: yellow;"></div>
 
 </section>
 
@@ -88,7 +87,7 @@
   
   <div class="carousel-inner" role="listbox">
     
-    <div class="item active">
+    <div class="item active" ng-click="scroll('#detail')">
     <a href="" data-toggle="collapse" data-target="#detail" ng-click="cbtn(1);">
       <img class="img1" src="../images/itship.png">
       
@@ -106,7 +105,7 @@
     </div>
 
 
-    <div class="item">
+    <div class="item" ng-click="scroll('#detail2')">
     <a href="" data-toggle="collapse" data-target='#detail2' ng-click="cbtn(2)">
           <img class="img2" src="../images/card.png">
           <span class="text2">
@@ -130,7 +129,7 @@
     </div>
 
 
-    <div class="item">
+    <div class="item" ng-click="scroll('#detail3')">
     <a href="" data-toggle="collapse" data-target='#detail3' ng-click="cbtn(3)">
         <img class="img3" src="../images/boatingf.png">
         <span class="text3">

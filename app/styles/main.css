@@ -84,12 +84,18 @@ body{
   opacity: .4;
   }
 .banner{
+  position: relative;
   background-color: #262626;
+  
+  --background-image: url(../images/circuit.png);
+  --background-image: url("../images/texture.png");
   --background-image: url(../images/bg5.jpg);
-  background-repeat: no-repeat;
+  --background-image: url(../images/nubanner.jpg);
+  --background-size: cover;
+
+
   background-position: center;
-  background-size: cover;
-  --box-shadow: 0px 45px 20px 0px black;
+  box-shadow: 0px 45px 20px 0px black;
   border-bottom: 3px solid grey;
   }
 .header {

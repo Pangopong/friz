@@ -113,9 +113,9 @@
 	background-color: #404040;
 	padding-top: 15px;
 
-	background-image: url("../images/texture.png") !important;
-  	background-repeat: repeat !important;
-  	background-color: #181818 !important;
+	background-image: url("../images/texture.png");
+  	background-repeat: repeat;
+  	background-color: #181818;
 }
 .detail p{
 	position: relative;
