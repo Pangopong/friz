@@ -32,6 +32,7 @@ body{
 }
 .navbar{
   position: relative;
+  top: -50px;
   border-style: none;
   background-color: #262626;
   padding: 0px;

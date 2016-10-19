@@ -10,7 +10,7 @@
 angular.module('itsApp')
   .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout, $window, $anchorScroll) {
    
-    //$('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '0px');});
+    $('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '-50px');});
 
 
 
