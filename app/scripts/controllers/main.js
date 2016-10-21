@@ -10,9 +10,8 @@
 angular.module('itsApp')
   .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout, $window, $anchorScroll) {
     
-    $('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '-50px');});
-
-
+    //$('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '-50px');});
+    // navbar-fixed-top
 
     $scope.viewTransition = function(loc){
     	
@@ -57,4 +56,35 @@ angular.module('itsApp')
     AOS.init({duration: 3000});
     $timeout(AOS.refresh,500);
 
-  });
+
+    //navbar scrollfix
+    $(document).ready(function() {
+                
+
+        console.log('navbar position: ' + $('.navbar').position().top);
+        var oldPoz = $('.navbar').position().top;
+        var oldPozOffset = oldPoz + 50;
+        $('navTrigger').css('top', oldPoz.toString());
+        
+        $(window).scroll(function () {
+
+            if ($(window).scrollTop() >= oldPoz) {
+                
+                $('.navbar').css({'position': 'fixed', 'top': '0'});
+                
+                //if($(window).scrollTop() <= oldPozOffset){
+                //$timeout(function() {$('.navbar').css({'position': 'fixed', 'top': '-50px'});}, 1000);
+                //}                
+            }
+
+            if ($(window).scrollTop() < oldPoz) {
+                 $('.navbar').css({'position':'relative', 'top': '0'});
+            }
+
+            });
+    });
+
+
+
+
+});

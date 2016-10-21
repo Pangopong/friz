@@ -40,10 +40,12 @@
         <!--<div style="height: 50px"></div>-->
         </div>
       
-        <div id="navTrigger">
-          <div class="containe">
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="border-radius: 0px;">
-        <div class="containe">
+      
+        
+        <div class="navbar navbar-inverse" role="navigation" style="border-radius: 0px;">
+
+        <div id="navToggle" style="position: absolute; background-color: transparent; width: 100px; height: 100px;"></div>
+        
           <div class="navbar-header">
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
@@ -63,16 +65,14 @@
               <li ng-click='scroll("#section1");'><a href="#section1" onclick="return false;">Company</a></li>
               <li ng-click='scroll("#section2");'><a href="#section2" onclick="return false;">Products</a></li>
               <li ng-click='scroll("#section3");'><a href="#section3" onclick="return false;">Section 3</a></li>
-              <li ng-click='scroll("#section4");'><a href="#section3" onclick="return false;">Contact</a></li>
+              <li ng-click='scroll("#section4");'><a href="#section4" onclick="return false;">Contact</a></li>
 
               <li class={{li1}} ng-click="viewTransition('/company');"><a>Company Profile</a></li>
               <li class={{li2}} ng-click="viewTransition('/about');"><a>Press Talk</a></li>
               <li class={{li3}} ng-click="viewTransition('/contact');"><a>Contact</a></li>
             </ul></div>
           </div>
-        </div>
-      </div>
-      </div>
+
       </div>
 
         
