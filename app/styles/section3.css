@@ -1,7 +1,7 @@
 #section3{
 	position: relative;
 	background-color: #262626;
-	height: 100vh;
+	min-height: 100vh;
 	box-shadow: 0px -4px 5px 0px black;
 }
 
