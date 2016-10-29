@@ -63,6 +63,7 @@ angular.module('itsApp')
 
         console.log('navbar position: ' + $('.navbar').position().top);
         var oldPoz = $('.navbar').position().top;
+        var section3 = $('#section3').position().top - 95;
         var oldPozOffset = oldPoz + 50;
         $('navTrigger').css('top', oldPoz.toString());
         
@@ -70,7 +71,7 @@ angular.module('itsApp')
 
             if ($(window).scrollTop() >= oldPoz) {
                 
-                $('.navbar').css({'position': 'fixed', 'top': '0'});
+                $('.navbar').css({'position': 'fixed', 'top': '0', 'background-color': 'rgba(0,0,0,0)'});
                 
                 //if($(window).scrollTop() <= oldPozOffset){
                 //$timeout(function() {$('.navbar').css({'position': 'fixed', 'top': '-50px'});}, 1000);
@@ -78,8 +79,14 @@ angular.module('itsApp')
             }
 
             if ($(window).scrollTop() < oldPoz) {
-                 $('.navbar').css({'position':'relative', 'top': '0'});
+                 $('.navbar').css({'position':'relative', 'top': '0', 'background-color': 'black'});
             }
+
+            //brand color(for visibility)
+            if ($(window).scrollTop() > section3 && $(window).scrollTop() < (section3 + $(window).height())){
+                $('#brand').css('filter', 'invert(100%)');
+            }
+            else $('#brand').css('filter', 'invert(0)');
 
             });
     });

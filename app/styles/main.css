@@ -8,7 +8,7 @@ html {
   */
   }
 body{ 
-  background: url(../images/circuit.png)  center center fixed;
+  background: url(../images/bg3.jpg)  center center fixed;
   }
 @keyframes squash{
   0% {max-height: 710px;}
@@ -18,9 +18,7 @@ body{
  :focus{
     outline: none;
   }
-@viewport{
-  width: 500px;
-}/*
+/*
 #navTrigger{
   --position: fixed;
   --top: 0;
@@ -31,18 +29,12 @@ body{
 .navbar{
   position: relative;
   width: 100%;
-  --top: -50px;
   border-style: none;
-  background-color: #262626;
+  background-color: black;
   padding: 0px;
   margin: 0px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid rgba(0,0,0,.4);
   z-index: 99;
-
-  text-shadow:-1.5px -1.5px 0 #000,  
-    1.5px -1.5px 0 #000,
-    -1.5px 1.5px 0 #000,
-    1.5px 1.5px 0 #000;
 
   font-family: black ops one;
   }
@@ -54,7 +46,7 @@ body{
 }
 .navbar-inverse .navbar-nav > .active > a{
     color: silver;
-    background-color: #595959;
+    background-color: rgba(255,255,255,.4);
 }
 /*
 .navbar-inverse .navbar-nav > .active > a:focus{
@@ -72,9 +64,9 @@ body{
 #brand{
   position: relative;
   top:-7px;
-  height:40px;
-  width:35px;
-  background-image: url(../images/minits.png);
+  height: 50px;
+  width: 50px;
+  background-image: url(../images/minifriz.png);
   background-size: contain;
   background-repeat: no-repeat;
   --opacity: .4;
@@ -84,7 +76,7 @@ body{
   }
 .banner{
   position: relative;
-  background-color: #262626;
+  background-color: white;
   
   --background-image: url(../images/circuit.png);
   --background-image: url("../images/texture.png");
@@ -123,7 +115,7 @@ body{
   position: relative;
   height: 40px;
   padding-top: 10px;
-  background-color: #262626;
+  background-color: black;
   color: silver; --#777
   border-top: 0px solid grey;
   z-index: 999;
@@ -131,16 +123,18 @@ body{
   box-shadow: 0px 7px 20px 7px black;
  }
 .footer img{
-  position: absolute;
-  top: 0px;
+  position: relative;
+  top: -20px;
   left: 1px;
-  width: 100px;
-  height: 70px;
+  width: 150px;
+  height: 100px;
+  filter: invert(100%);
+
   margin: 0px;
   margin-left: 5px;
 }
 #hidden{
-  background-color: #262626;
+  background-color: black;
   position: relative;
   margin-bottom: -700px;
   width: 100%;
