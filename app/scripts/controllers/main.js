@@ -69,7 +69,7 @@ angular.module('itsApp')
         
         $(window).scroll(function () {
 
-
+            var section1 = $('#section1').position().top;
             var section3 = $('#section3').position().top - 50;
 
             if ($(window).scrollTop() >= oldPoz) {
@@ -86,7 +86,8 @@ angular.module('itsApp')
             }
 
             //brand color(for visibility)
-            if ($(window).scrollTop() > section3 && $(window).scrollTop() < (section3 + $(window).height())){
+
+            if ($(window).scrollTop() > section3 && $(window).scrollTop() < (section3 + $(window).height()) || $(window).scrollTop() > section1 && $(window).scrollTop() < (section1 + $('#section1').height())){
                 $('#brand').css('filter', 'invert(100%)');
             }
             else $('#brand').css('filter', 'invert(0)');
