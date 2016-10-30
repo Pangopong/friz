@@ -63,11 +63,14 @@ angular.module('itsApp')
 
         console.log('navbar position: ' + $('.navbar').position().top);
         var oldPoz = $('.navbar').position().top;
-        var section3 = $('#section3').position().top - 95;
+
         var oldPozOffset = oldPoz + 50;
         $('navTrigger').css('top', oldPoz.toString());
         
         $(window).scroll(function () {
+
+
+            var section3 = $('#section3').position().top - 50;
 
             if ($(window).scrollTop() >= oldPoz) {
                 
