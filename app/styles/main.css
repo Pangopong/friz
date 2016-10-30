@@ -8,7 +8,7 @@ html {
   */
   }
 body{ 
-  background: url(../images/bg3.jpg)  center center fixed;
+  background: url(../images/bg2.jpg)  center center fixed;
   }
 @keyframes squash{
   0% {max-height: 710px;}
@@ -46,7 +46,7 @@ body{
 }
 .navbar-inverse .navbar-nav > .active > a{
     color: silver;
-    background-color: rgba(255,255,255,.4);
+    background-color: rgba(26,26,26,.4);
 }
 /*
 .navbar-inverse .navbar-nav > .active > a:focus{
