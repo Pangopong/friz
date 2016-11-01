@@ -15,6 +15,9 @@
 	
 	font-size: 25px;
 }
+#section1 h1{
+	font-weight: bold;
+}
 
 	#cogs{
 		position: relative;
