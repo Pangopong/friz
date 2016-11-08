@@ -19,7 +19,7 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -44,4 +44,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+
+      //html5 history API
+      $locationProvider.html5Mode(true);
   });
