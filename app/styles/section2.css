@@ -1,13 +1,23 @@
-/*#owl-example .item{
+#owl-example .item{
     display: block;
-    width: 100%;
+    --width: 100%;
     height: auto;
     --box-shadow: 0px 7px 20px 2px black;
 }
+.owl-controls.clickable{
+	padding: 0px;
+	margin: 0px;
+	height: 0px;
+}
+.owl-pagination{
+	position: relative;
+	top: -50px;
+}
 
 #owl-example{
+	width: 100%;
 	box-shadow: 0px 7px 20px 2px black;
-}*/
+}
 
 /*CAROUSEL*/
 #section2{
