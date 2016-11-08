@@ -27,7 +27,7 @@
 <link rel="stylesheet" type="text/css" href="../styles/section2.css">
 
 <div id="owl-example" class="owl-carousel">
-  <div class="item"> 
+  <div class="item" ng-click="scroll('#detail', 350)"> 
   <a data-toggle="collapse" data-target="#detail" ng-click="cbtn(1);">
       
     
@@ -43,7 +43,7 @@
     </a>
 
   </div>
-  <div class="item">
+  <div class="item" ng-click="scroll('#detail2', 350)">
     <a  data-toggle="collapse" data-target='#detail2' ng-click="cbtn(2)">
           <span class="text2">
           <h1>Ipsum</h1>
@@ -64,7 +64,7 @@
           </span>
           </a>
   </div>
-  <div class="item">
+  <div class="item" ng-click="scroll('#detail3', 350)">
     <a  data-toggle="collapse" data-target='#detail3' ng-click="cbtn(3)">
         <span class="text3">
           <h1>Dolor</h1>
