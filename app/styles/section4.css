@@ -36,3 +36,10 @@
 .scrolloff{
 	pointer-events: none;
 }
+@media screen and (max-width: 600px){
+	#section4 #label{
+		position: relative;
+		width: 100%;
+		--transform: scale(.5);
+	}
+}

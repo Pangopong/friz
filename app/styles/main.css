@@ -131,6 +131,15 @@ body{
   margin: 30px 0;
   }
 
+#facebook{
+  position: relative;
+   
+  filter: invert(100%);
+}
+#facebook img{
+  width: 50px;
+  height: 50px;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
