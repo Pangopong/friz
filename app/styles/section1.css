@@ -18,22 +18,22 @@
 	font-weight: bold;
 }
 
-	#cogs{
+	#pipe{
 		position: relative;
 		left: 30%;
 		top: -100px;
 	}
-	#cogs img{
+	#pipe img{
 
 	}
 
 @media screen and (max-width: 684px){
-	#cogs{
+	#pipe{
 		top: -50px;
 	}
 }
 @media screen and (min-width: 1920px){
-	#cogs{
+	#pipe{
 		top: 0px;
 	}
 }

@@ -1,0 +1,16 @@
+#section0{
+	
+}
+#section0 .item {
+	width: 100vw;
+	height: 100vh;
+}
+#section0 .item img{
+	width: 100%;
+}
+#section0 #stel1{
+	position: absolute; 
+	top: 100px; 
+	left: -1px; 
+	width: 550px;
+}

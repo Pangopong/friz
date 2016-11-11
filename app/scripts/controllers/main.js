@@ -16,7 +16,7 @@ angular.module('itsApp')
     $scope.viewTransition = function(loc){
     	
     	$rootScope.squash = "squash";
-      $rootScope.shadow = "none";
+        $rootScope.shadow = "none";
         function changeView(){$location.path(loc);}
         function cancelAnim(){$rootScope.squash = "ani"; $rootScope.shadow = "0px 7px 20px 7px black";}
 
@@ -28,23 +28,28 @@ angular.module('itsApp')
 
     //OWL
     $(document).ready(function() {
- 
-        $("#owl-example").owlCarousel({
+        //$timeout(function() {
+        
+        $("#owl-ban").owlCarousel({
 
             navigation : false, // Show next and prev buttons
             slideSpeed : 300,
             paginationSpeed : 400,
             singleItem:true
- 
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
         });
- 
+
+        $("#owl-sec2").owlCarousel({
+
+            navigation : false, // Show next and prev buttons
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem:true
+        });
+        
+        //}, 300);
+
     });
+
 
     //carousel 
     $scope.cbtn = function(btn){
@@ -85,7 +90,6 @@ angular.module('itsApp')
         var oldPoz = $('.navbar').position().top;
 
         var oldPozOffset = oldPoz + 50;
-        $('navTrigger').css('top', oldPoz.toString());
         
         $(window).scroll(function () {
 
@@ -95,18 +99,18 @@ angular.module('itsApp')
             if ($(window).scrollTop() >= oldPoz) {
                 
                 $('.navbar').css({'position': 'fixed', 'top': '0', 'background-color': 'rgba(0,0,0,0)'});
-                
-                //if($(window).scrollTop() <= oldPozOffset){
-                //$timeout(function() {$('.navbar').css({'position': 'fixed', 'top': '-50px'});}, 1000);
-                //}                
+                                
             }
 
             if ($(window).scrollTop() < oldPoz) {
-                 $('.navbar').css({'position':'relative', 'top': '0', 'background-color': '#262626'});
+                 $('.navbar').css({'position':'relative', 'top': '-100', 'background-color': '#262626'});
+                  
             }
 
-            //brand color(for visibility)
 
+
+
+            //brand color(for visibility)
             if ($(window).scrollTop() > section3 && $(window).scrollTop() < (section3 + $(window).height()) || $(window).scrollTop() > section1 && $(window).scrollTop() < (section1 + $('#section1').height())){
                 $('#brand').css('filter', 'invert(100%)');
             }
