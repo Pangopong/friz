@@ -102,7 +102,7 @@ angular.module('itsApp')
             }
 
             if ($(window).scrollTop() < oldPoz) {
-                 $('.navbar').css({'position':'relative', 'top': '0', 'background-color': 'black'});
+                 $('.navbar').css({'position':'relative', 'top': '0', 'background-color': '#262626'});
             }
 
             //brand color(for visibility)

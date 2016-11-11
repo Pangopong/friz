@@ -1,3 +1,4 @@
+/*GLOBAL*/
 html {
 /* 
   background: url(../images/bg2.jpg) no-repeat center center fixed; 
@@ -15,14 +16,44 @@ body{
   50% {max-height: 0px;}
   100% {max-height: 710px;}
   }
+
  :focus{
     outline: none;
   }
+  .view{
+  animation-duration: 2s;
+  }
+  .global{
+  overflow: hidden;
+  min-height: 1000px;
+  --max-height: 1310px;
+  --max-height: auto;
+  }
+
+
+/*BANNER*/
+.banner{
+  position: relative;
+  background-color: #262626;
+  z-index: 2;
+
+  box-shadow: 0px 10px 20px 0px black;
+  }
+  .banner img{
+    filter: invert(100%);
+    margin: 0px;
+    width: 100%;
+  }
+
+
+
+
+/*NAVBAR*/
 .navbar{
   position: relative;
   width: 100%;
   border-style: none;
-  background-color: black;
+  background-color: #262626;
   padding: 0px;
   margin: 0px;
   border-bottom: 2px solid rgba(0,0,0,.4);
@@ -41,19 +72,6 @@ body{
     color: silver;
     background-color: rgba(26,26,26, .7);
 }
-/*
-.navbar-inverse .navbar-nav > .active > a:focus{
-  background-color: transparent;
-}*/
-.view{
-  animation-duration: 2s;
-  }
-.global{
-  overflow: hidden;
-  min-height: 1000px;
-  --max-height: 1310px;
-  --max-height: auto;
-  }
 #brand{
   position: relative;
   top:-7px;
@@ -67,36 +85,17 @@ body{
 #brand:hover{
   opacity: .4;
   }
-.banner{
-  position: relative;
-  background-color: black;
-  z-index: 2;
+/*
+.navbar-inverse .navbar-nav > .active > a:focus{
+  background-color: transparent;
+}*/
 
-  box-shadow: 0px 10px 20px 0px black;
-  }
-  .banner img{
-    filter: invert(100%);
-    margin: 0px;
-    width: 100%;
-  }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 0px;
-  padding-right: 0px;
-  }
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  --padding-bottom: 19px;
-  }
 
-/* Custom page footer */
+
+
+/* Footer */
 .footer {
   position: relative;
   height: 40px;
@@ -131,15 +130,7 @@ body{
   margin: 30px 0;
   }
 
-#facebook{
-  position: relative;
-   
-  filter: invert(100%);
-}
-#facebook img{
-  width: 50px;
-  height: 50px;
-}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
