@@ -38,6 +38,7 @@ angular.module('itsApp')
             singleItem:true
         });
 
+        $timeout(function(){
         $("#owl-sec2").owlCarousel({
 
             navigation : false, // Show next and prev buttons
@@ -45,8 +46,7 @@ angular.module('itsApp')
             paginationSpeed : 400,
             singleItem:true
         });
-        
-        //}, 300);
+        }, 300);
 
     });
 
