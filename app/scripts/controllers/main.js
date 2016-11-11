@@ -13,6 +13,8 @@ angular.module('itsApp')
     //$('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '-50px');});
     // navbar-fixed-top
 
+        $(document).ready(function(){$(window).stellar();});
+
     $scope.viewTransition = function(loc){
     	
     	$rootScope.squash = "squash";
@@ -29,6 +31,7 @@ angular.module('itsApp')
     //OWL
     $(document).ready(function() {
         //$timeout(function() {
+        
         
         $("#owl-ban").owlCarousel({
 
@@ -48,6 +51,7 @@ angular.module('itsApp')
         });
         }, 300);
 
+        //stellar
     });
 
 
