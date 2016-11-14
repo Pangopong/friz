@@ -14,3 +14,12 @@
 	left: -1px; 
 	width: 550px;
 }
+@media screen and (max-width: 990px){
+	#section0 .item {
+	width: 100vw;
+	height: 500px;
+}
+#section0 .item img{
+	width: 100%;
+}
+}
