@@ -10,12 +10,12 @@
 angular.module('itsApp')
   .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout, $window, $anchorScroll) {
     
-    //$('#navTrigger').hover(function(){$('.navbar').css('top', '0px');}, function(){$('.navbar').css('top', '-50px');});
-    // navbar-fixed-top
+    
 
         $(document).ready(function(){$(window).stellar();});
 
-    $scope.viewTransition = function(loc){
+
+        $scope.viewTransition = function(loc){
     	
     	$rootScope.squash = "squash";
         $rootScope.shadow = "none";
@@ -141,5 +141,10 @@ angular.module('itsApp')
 
 
 
+    /*
+    var clock = $('.your-clock').FlipClock({
+
+    });
+    */
 
 });
