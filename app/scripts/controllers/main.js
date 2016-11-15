@@ -87,7 +87,7 @@ angular.module('itsApp')
     //navbar scrollfix
     $(document).ready(function() {
                 
-
+        $('body').animate({scrollTop: 1}, 'slow');
         console.log('navbar position: ' + $('.navbar').position().top);
         var oldPoz = $('.navbar').position().top;
 

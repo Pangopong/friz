@@ -34,13 +34,22 @@
 
 	}
 
-@media screen and (max-width: 684px){
-	#pipe{
-		top: -50px;
-	}
-}
 @media screen and (min-width: 1920px){
 	#pipe{
 		top: 0px;
 	}
+}
+@media screen and (max-width: 684px){
+	#section1 p{
+		width: 100%;
+		text-align: center;
+	}
+	
+	#pipe{
+		top: -50px;
+	}
+
+}
+@media screen and (max-width: 500px){
+
 }
