@@ -11,11 +11,15 @@
 	padding: 0px;
 	margin: 0px;
 	width: 60%;
-	
+	text-shadow: 2px 2px black;
 	font-size: 25px;
+}
+#section1 .quote{
+	text-align: center;
 }
 #section1 h1{
 	font-weight: bold;
+	text-shadow: 2px 2px black;
 }
 
 	#pipe{

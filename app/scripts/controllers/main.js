@@ -24,8 +24,6 @@ angular.module('itsApp')
 
         $timeout(changeView, 950);
         $timeout(cancelAnim, 1500);
-
-        //document.getElementById("hidden") = 200;
     }
 
     //OWL
@@ -107,7 +105,7 @@ angular.module('itsApp')
             }
 
             if ($(window).scrollTop() < oldPoz) {
-                 $('.navbar').css({'position':'relative', 'top': '-100', 'background-color': '#262626'});
+                 $('.navbar').css({'position':'relative', 'top': '-100', 'background-color': 'black'});
                   
             }
 
