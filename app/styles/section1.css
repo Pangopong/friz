@@ -23,6 +23,7 @@
 #section1 h1{
 	font-weight: bold;
 	text-shadow: 2px 2px black;
+	text-decoration: underline;
 }
 
 	#pipe{
@@ -40,11 +41,16 @@
 	}
 }
 @media screen and (max-width: 684px){
+	#section1 h1{
+	font-weight: bold;
+	text-shadow: 2px 2px black;
+	text-align: center;
+	}
 	#section1 p{
 		width: 100%;
 		text-align: center;
 	}
-	
+
 	#pipe{
 		top: -50px;
 	}
