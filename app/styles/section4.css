@@ -43,6 +43,11 @@
   width: 30px;
   height: 30px;
 }
+#facebook p{
+	position: relative;
+	left: -5px;
+	margin: 0px;
+}
 .scrolloff{
 	pointer-events: none;
 }
