@@ -1,5 +1,6 @@
 #section0{
 	
+	z-index: -1;
 }
 #section0 .item {
 	width: 100vw;
@@ -17,9 +18,24 @@
 @media screen and (max-width: 990px){
 	#section0 .item {
 	width: 100vw;
-	height: 500px;
+	height: 200px;
 }
 #section0 .item img{
 	width: 100%;
 }
+#section0 #stel1{
+	top: 0px;
+	max-width: 500px;
+}
+}
+@media screen and (max-width: 755px){
+	#owl-ban{
+		--visibility: hidden;
+		height: 200px;
+	}
+}
+@media screen and (max-width:500px){
+	#section0 #stel1{
+		left: -70px;
+	}
 }
