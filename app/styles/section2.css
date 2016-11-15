@@ -1,8 +1,15 @@
+#section2 .owl-wrapper{
+	--max-height: 500px;
+}
+#section2 .owl-wrapper-outer{
+	max-height: 500px;
+}
 #owl-example .item{
     display: block;
     --width: 100%;
     height: auto;
     --box-shadow: 0px 7px 20px 2px black;
+
 }
 .owl-controls.clickable{
 	padding: 0px;
