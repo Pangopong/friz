@@ -12,7 +12,7 @@ angular.module('itsApp')
     
     
 
-        $(document).ready(function(){$(window).stellar();});
+        //$(document).ready(function(){$(window).stellar();});
 
 
         $scope.viewTransition = function(loc){
@@ -76,8 +76,8 @@ angular.module('itsApp')
    //scroll()
    $scope.scroll = function(targetId, delay){
 
-    $timeout(function(){$("body").animate({scrollTop: $(targetId).offset().top}, "slow");}, delay);
-    
+    $timeout(function(){$("body, html").animate({scrollTop: $(targetId).offset().top}, "slow");}, delay);
+    console.log('button pressed');
    }
        
     AOS.init({duration: 3000});
@@ -87,7 +87,7 @@ angular.module('itsApp')
     //navbar scrollfix
     $(document).ready(function() {
                 
-        $('body').animate({scrollTop: 1}, 'slow');
+        $('body, html').animate({scrollTop: 1}, 'slow');
         console.log('navbar position: ' + $('.navbar').position().top);
         var oldPoz = $('.navbar').position().top;
 
