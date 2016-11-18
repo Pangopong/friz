@@ -29,7 +29,12 @@ body{
   --max-height: 1310px;
   --max-height: auto;
   }
-
+ .inset{
+  box-shadow: inset 0 0 20px #000000;
+ }
+  .diac{
+  --font-size: 16px;
+  }
 
 
 /*BANNER*/
