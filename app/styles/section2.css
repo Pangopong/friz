@@ -1,10 +1,7 @@
-#section2 .owl-wrapper{
-	--max-height: 500px;
-}
-#section2 .owl-wrapper-outer{
+#owl-sec2 .owl-wrapper-outer{
 	max-height: 500px;
 }
-#owl-example .item{
+#owl-sec2 .item{
     display: block;
     --width: 100%;
     height: auto;
@@ -16,16 +13,19 @@
 	margin: 0px;
 	height: 0px;
 }
-.owl-pagination{
-	position: relative;
-	top: -50px;
-}
 
-#owl-example{
+#owl-sec2{
 	width: 100%;
 	box-shadow: 0px 7px 20px 2px black;
 }
-
+#owl-sec2 p{
+	margin-bottom: 0px;
+}
+.owl-controls{
+	position: relative;
+	top: -50px;
+	height: 0px;
+}
 /*CAROUSEL*/
 #section2{
 	position: relative;
