@@ -29,7 +29,16 @@ angular.module('itsApp')
     //OWL
     $(document).ready(function() {
         //$timeout(function() {
-        
+
+        $('#calendar').fullCalendar({
+        defaultView: 'agendaDay',
+        firstDay: 1,
+        minTime: '09:00:00',
+        maxTime: '18:00:00',
+        allDaySlot: false,
+        height: 460
+
+        });
         
         $("#owl-ban").owlCarousel({
 

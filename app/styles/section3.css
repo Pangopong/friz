@@ -26,7 +26,7 @@
 	background-image: url(../images/);
 	background-size: cover;
 }
-#section3 thead tr th{
+#table1 thead tr th{
 	color: white;
 	padding-left: 20px;
 	border-bottom: 2px solid black;
@@ -34,19 +34,28 @@
     font-size: 20px;
 	text-shadow: 2px 2px black; 
 }
-#section3 tbody tr td{
+#table1 tbody tr td{
 	color: silver;
 	padding-left: 20px;
 	border-bottom: 1px solid black;
 	background-color: rgba(0,0,0, .3);
 	font-size: 20px;
 }
-#section3 thead tr th:nth-child(1){
+#table1 thead tr th:nth-child(1){
 	text-align: center;
 }
-#section3 tbody tr td:nth-child(1){
+#table1 tbody tr td:nth-child(1){
 	text-align: center;
 }
-#section3 tbody tr:hover{
+#table1 tbody tr:hover{
 	background-color: rgba(0,0,0, .7);
+}
+
+#calendar tbody tr td{
+	--color: silver;
+	--border-bottom: 1px solid black;
+	background-color: rgba(0,0,0, 0);
+}
+#calendar tbody tr td:hover{
+	background-color: rgba(0,0,0, .3);
 }
