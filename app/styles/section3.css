@@ -51,6 +51,9 @@
 	background-color: rgba(0,0,0, .7);
 }
 
+#calendar h2{
+	font-size: 20px;
+}
 #calendar tbody tr td{
 	--color: silver;
 	--border-bottom: 1px solid black;
