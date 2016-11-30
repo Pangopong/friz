@@ -7,8 +7,17 @@
  * # MainCtrl
  * Controller of the itsApp
  */
+
+    var rm = function(ctr){
+        angular.element("form").scope().control = ctr;
+        angular.element("form").scope().rmToken = 1;
+        angular.element("form").scope().programare();
+        angular.element("form").scope().control = 'null';
+    }
+
+
 angular.module('itsApp')
-  .controller('MainCtrl', function ($scope, $rootScope, $location, $timeout, $window, $anchorScroll) {
+  .controller('MainCtrl', function ($scope, $http, $rootScope, $location, $timeout, $window, $anchorScroll) {
     
     
 
@@ -29,16 +38,32 @@ angular.module('itsApp')
     //OWL
     $(document).ready(function() {
         //$timeout(function() {
+        $scope.getEvents();
 
         $('#calendar').fullCalendar({
-        defaultView: 'agendaDay',
+        defaultView: 'agendaWeek',
+        selectable: true,
+        unselectAuto: false,
+        selectOverlap: false,
         firstDay: 1,
+        slotLabelInterval: '00:30:00',
         minTime: '09:00:00',
         maxTime: '18:00:00',
         allDaySlot: false,
-        height: 460
+        height: 450,
+        titleFormat: 'DDMMMM',
+        displayEventEnd: true,
+        eventColor: '#378006',
+        dayClick: function(date, jsEvent, view) {
 
-        });
+        $scope.start = date.format('');
+        $scope.end = moment($scope.start).add(30, 'minutes').format('Y-MM-DDTHH:mm:ss');
+        console.log($scope.end);
+
+        },
+        events: $scope.jsonator
+
+    });
         
         $("#owl-ban").owlCarousel({
 
@@ -122,11 +147,12 @@ angular.module('itsApp')
 
 
             //brand color(for visibility)
+            /*
             if ($(window).scrollTop() > section3 && $(window).scrollTop() < (section3 + $(window).height()) || $(window).scrollTop() > section1 && $(window).scrollTop() < (section1 + $('#section1').height())){
                 $('#brand').css('filter', 'invert(100%)');
             }
             else $('#brand').css('filter', 'invert(0)');
-
+            */
             });
     });
 
@@ -147,11 +173,71 @@ angular.module('itsApp')
     });
 
 
+    //BACKEND
+    $scope.jsonator = [];
+    
 
-    /*
-    var clock = $('.your-clock').FlipClock({
+    $scope.title = '';
+    $scope.start = 'null';
+    $scope.end = 'null';
+    $scope.email = '';
+    $scope.phone = '';
+    $scope.name = '';
+    $scope.control = 'null';
+    var programat = 0;
+    $scope.tuns = function(ser){
+        $scope.title = ser;
+        console.log($scope.title);
+    }
 
-    });
-    */
+    $scope.anulare = function(){
+        rm('del');
+        $('#anulare').prop('disabled', true);
+    }
+
+    $scope.getEvents = function(){
+        $http({
+            method: 'GET',
+            url: 'http://localhost:3000'
+        }).then(function successCallback(response) {
+
+            $scope.jsonator = response.data;
+            console.log($scope.jsonator);
+             
+            $('#calendar').fullCalendar('removeEvents');
+            $('#calendar').fullCalendar('addEventSource', $scope.jsonator);
+            
+
+        }, function errorCallback(response) {
+
+            console.log(response);
+        });
+    }
+
+    $scope.programare = function(){
+
+        if(($scope.phone != '' && $scope.start != 'null') && programat == 0 || $scope.rmToken == 1){
+        //$http.post('http://192.168.0.105:3000', data, config).then(successCallback, errorCallback);
+
+            programat++;
+            $('#anulare').prop('disabled', false);
+
+            var req = {
+            method: 'POST',
+            url: 'http://localhost:3000/?title=' + $scope.title + '&start=' + $scope.start + '&end=' + $scope.end + '&email=' + $scope.email + '&phone=' + $scope.phone + '&name=' + $scope.name + '&control=' + $scope.control,
+            headers: {
+                'Content-Type': undefined
+            },
+            data: { test: 'test' }
+            }
+            console.log(req);
+            $http(req).then(function(){console.log('POST\n'); $scope.getEvents();}, function(){alert('NO POST')});
+            
+        }
+        else if($scope.start == 'null') alert('Alege o zi și o oră');
+        else if(programat) alert('Limita de programări atinsă, pentru anulare puteți să folosiți butonul adiacent ultimului buton apăsat');
+    }
+
+
 
 });

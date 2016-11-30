@@ -115,6 +115,12 @@
 <section id='section3'>
   <link rel="stylesheet" type="text/css" href="../styles/section3.css">
 
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+  
+
+
   <h2>Servicii&Program</h2>
   <div class="inset" style="overflow: hidden;"> 
     <div>
@@ -127,82 +133,82 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr ng-click='tuns("Tuns Clasic");'>
         <td>Tuns Clasic</td>
         <td>13 RON</td>
         <td>15min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Tuns Zero");'>
         <td>Tuns Zero</td>
         <td>8 RON</td>
         <td>10min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Tuns Copii");'>
         <td>Tuns Copii</td>
         <td>10 RON</td>
         <td>10min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Tuns Pensionari");'>
         <td>Tuns Pensionari</td>
         <td>10 RON</td>
         <td>10min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Tuns Barba");'>
         <td>Tuns Barba</td>
         <td>6 RON</td>
         <td>15min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Tuns Mustata");'>
         <td>Tuns Mustața</td>
         <td>4 RON</td>
         <td>15min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Barbierit Aparat");'>
         <td>Bărbierit - Aparat de unică folosință</td>
         <td>10 RON</td>
         <td>15min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Barbierit Brici");'>
         <td>Bărbierit - La Brici</td>
         <td>14 RON</td>
         <td>15min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Masaj Capilar");'>
         <td>Frecție/Masaj Capilar</td>
         <td>6 RON</td>
         <td>10min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Spalare Scalp");'>
         <td>Spălare Scalp</td>
         <td>5 RON</td>
         <td>5min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("ConturPerciuni");'>
         <td>Contur + Perciuni</td>
         <td>6 RON</td>
         <td>5min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Fixativ");'>
         <td>Fixativ</td>
         <td>3 RON</td>
         <td>5min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Spuma");'>
         <td>Spumă</td>
         <td>3 RON</td>
         <td>5min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Uscat Par");'>
         <td>Uscat Păr</td>
         <td>2 RON</td>
         <td>5min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Aranjat Perie");'>
         <td>Aranjat Perie/Placă</td>
         <td>4 RON</td>
         <td>10min</td>
       </tr>
-      <tr>
+      <tr ng-click='tuns("Tuns Aranjat Barba");'>
         <td>Tuns Barba + Aranjat Barba</td>
         <td>10 RON</td>
         <td>15min</td>
@@ -211,9 +217,33 @@
     </table>
     </div>
   </div>
-  <br><br>
-  <div class="inset" id='calendar'></div>
 
+  </div>
+
+  <div class="col-sm-6">
+  <div class="inset" id='calendar'></div>
+  </div>
+
+  <div class="col-sm-6">
+  <form>
+  <label>Nume:</label><input type="text" ng-model='name' class="inset" maxlength="50"><br>
+  <label>Telefon:</label><input type='text' ng-model='phone' class="inset" maxlength="15" required><br>
+  <label>Email(opțional):</label><input type="text" ng-model='email' maxlength="50" class="inset"><br><br>
+  <button class='btn-success' id='programare' ng-click='programare()'>Programare!</button>
+  <button class="btn-warning" id='anulare' disabled="true" ng-click='anulare()'>Anulare</button>
+  </form>
+  </div>
+
+  <script type="text/javascript">
+        
+  </script>
+
+</div>
+
+  
+  
+  
+  
 </section>
 
 <section id='section4' ng-controller='ContactCtrl'>

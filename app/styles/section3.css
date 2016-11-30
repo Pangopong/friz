@@ -51,6 +51,12 @@
 	background-color: rgba(0,0,0, .7);
 }
 
+#calendar{
+	position: relative;
+	top: 63px;
+	overflow: hidden;
+}
+
 #calendar h2{
 	font-size: 20px;
 }
@@ -60,5 +66,40 @@
 	background-color: rgba(0,0,0, 0);
 }
 #calendar tbody tr td:hover{
-	background-color: rgba(0,0,0, .3);
+	--background-color: rgba(0,0,0, .3);
+}
+
+.fc-toolbar{
+	margin: 0px;
+}
+.fc-widget-content{
+	cursor: pointer;
+}
+.fc-highlight{
+	background-color: red;
+}
+
+#section3 form{
+	position: relative;
+	margin-top: 100px;
+	color: silver;
+}
+#section3 form input{
+	background-color: rgba(0,0,0,.3);
+	border: 0;
+	color: grey;
+	width: 100%;
+}
+#section3 form button{
+	position: relative;
+	--display: flex;
+	margin: 0px;
+	padding: 0px;
+}
+
+#programare{
+	width: 50%;
+}
+#anulare{
+	width: 49%;
 }
