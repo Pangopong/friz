@@ -3,7 +3,7 @@ var app = express()
 var fs = require('fs')
 var json = []
 var fileInc = 0
-fs.readFile('./tmp/' + fileInc + '.json', 'utf8', function (err,data) {
+fs.readFile('./data/' + fileInc + '.json', 'utf8', function (err,data) {
   if (err) return console.log(err);
   var json = JSON.parse(data);
   console.log(json);
@@ -16,7 +16,7 @@ fs.readFile('./tmp/history.txt', 'utf8', function(err, data){
 });
 
 app.get('/', function (req, res) {
-  fs.readFile('./tmp/' + fileInc + '.json', 'utf8', function (err,data) {
+  fs.readFile('./data/' + fileInc + '.json', 'utf8', function (err,data) {
     if (err) {
       return console.log(err);
     }
@@ -46,7 +46,7 @@ app.post("/",function(req, res) {
   var name = string[5].substr("name=".length)
   var control = string[6].substr("control=".length)
 
-  fs.readFile('./tmp/' + fileInc + '.json', 'utf8', function (err,data) {
+  fs.readFile('./data/' + fileInc + '.json', 'utf8', function (err,data) {
     if (err) {
       return console.log(err);
     }
@@ -54,7 +54,7 @@ app.post("/",function(req, res) {
       if(control == 'null'){
           json.push({title: title, start: start, end: end, name: name, email:email, phone:phone})
           console.log(json);
-          fs.writeFile("./tmp/" + fileInc + ".json", JSON.stringify(json), function(err) {
+          fs.writeFile("./data/" + fileInc + ".json", JSON.stringify(json), function(err) {
               if(err) {
                   return console.log(err)
               }
@@ -62,7 +62,7 @@ app.post("/",function(req, res) {
       }
       else if(control == '*') {
           json = [];
-          fs.writeFile("./tmp/" + fileInc + ".json", JSON.stringify(json), function(err) {
+          fs.writeFile("./data/" + fileInc + ".json", JSON.stringify(json), function(err) {
               if(err) {
                   return console.log(err)
               }
@@ -73,7 +73,7 @@ app.post("/",function(req, res) {
       else if(control == 'del'){
         json.pop();
         
-          fs.writeFile('./tmp/' + fileInc + '.json', JSON.stringify(json));
+          fs.writeFile('./data/' + fileInc + '.json', JSON.stringify(json));
       } 
 
 
@@ -88,9 +88,9 @@ app.listen(port, function () {
 
 var create = function(){
   var appender = fileInc + ' ';
-  fs.appendFile('./tmp/history.txt', appender);
+  fs.appendFile('./data/history.txt', appender);
   fileInc++; 
-  fs.writeFile('./tmp/' + fileInc +  '.json', '[]'); 
+  fs.writeFile('./data/' + fileInc +  '.json', '[]'); 
   console.log(fileInc + '.json created');
 
 }
