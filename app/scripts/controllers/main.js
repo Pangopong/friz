@@ -58,7 +58,7 @@ angular.module('itsApp')
 
         $scope.start = date.format('');
         $scope.end = moment($scope.start).add(30, 'minutes').format('Y-MM-DDTHH:mm:ss');
-        console.log($scope.end);
+        console.log($scope.start + '-' +$scope.end);
 
         },
         events: $scope.jsonator
@@ -216,7 +216,7 @@ angular.module('itsApp')
 
     $scope.programare = function(){
 
-        if(($scope.phone != '' && $scope.start != 'null') && programat == 0 || $scope.rmToken == 1){
+        if(($scope.phone != '' && $scope.start != 'null' && programat == 0) || $scope.rmToken == 1){
         //$http.post('http://192.168.0.105:3000', data, config).then(successCallback, errorCallback);
 
             programat++;
