@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
       return console.log(err);
     }
     json = JSON.parse(data);
-    res.header('Access-Control-Allow-Origin', 'http://139.59.136.223/')
+    res.header('Access-Control-Allow-Origin', 'http://139.59.136.223')
     res.header('Access-Control-Allow-Credentials', true)
     res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS')
     res.header('Access-Control-Allow-Headers', 'Content-Type')
@@ -31,7 +31,7 @@ app.get('/', function (req, res) {
 
 app.post("/",function(req, res) {
 
-  res.header('Access-Control-Allow-Origin', 'http://139.59.136.223/')
+  res.header('Access-Control-Allow-Origin', 'http://139.59.136.223')
   res.header('Access-Control-Allow-Credentials', true)
   res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS')
   res.header('Access-Control-Allow-Headers', 'Content-Type')
