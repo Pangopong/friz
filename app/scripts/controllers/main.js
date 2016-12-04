@@ -224,7 +224,7 @@ angular.module('itsApp')
 
             var req = {
             method: 'POST',
-            url: 'http://139.59.136.223/?title=' + $scope.title + '&start=' + $scope.start + '&end=' + $scope.end + '&email=' + $scope.email + '&phone=' + $scope.phone + '&name=' + $scope.name + '&control=' + $scope.control,
+            url: 'http://139.59.136.223:3000/?title=' + $scope.title + '&start=' + $scope.start + '&end=' + $scope.end + '&email=' + $scope.email + '&phone=' + $scope.phone + '&name=' + $scope.name + '&control=' + $scope.control,
             headers: {
                 'Content-Type': undefined
             },
