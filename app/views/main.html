@@ -103,6 +103,7 @@
   <div class="row">
     <div class="col-sm-6">
   
+  <img src="../images/question.png" id='question' style='position: absolute; top: 30px; left: 94%; width: 25px;' onclick="alert('Pasul 1: Selectează serviciul dorit\nPasul 2: Alege o dată și o oră liberă\nPasul 3: Completează formularul cu informațiile necesare și apasă butonul PROGRAMARE');">
 
 
   <h2>Rezervări&Servicii</h2>
@@ -212,7 +213,7 @@
   <form>
   <label>Nume:</label><input type="text" ng-model='name' class="inset" maxlength="50"><br>
   <label>Telefon:</label><input type='text' ng-model='phone' class="inset" maxlength="15" required><br>
-  <label>Email(opțional):</label><input type="text" ng-model='email' maxlength="50" class="inset"><br><br>
+  <label>Email:</label><input type="text" ng-model='email' maxlength="50" class="inset"><br><br>
   <button class='btn-success' id='programare' ng-click='programare()'>Programare!</button>
   <button class="btn-warning" id='anulare' disabled="true" ng-click='anulare()'>Anulare</button>
   </form>

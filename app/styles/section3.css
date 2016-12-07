@@ -21,7 +21,9 @@
 	width: 75%;
 	left: 120px;
 }
-
+#section3 #question:hover{
+	cursor: help;
+}
 #section3 .inset{
 	background-image: url(../images/);
 	background-size: cover;
