@@ -52,8 +52,8 @@ angular.module('itsApp')
         allDaySlot: false,
         height: 450,
         titleFormat: 'DDMMMM',
-        displayEventEnd: true,
         eventColor: '#378006',
+        displayEventTime: false,
         dayClick: function(date, jsEvent, view) {
 
         $scope.start = date.format('');
