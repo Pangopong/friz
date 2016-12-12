@@ -231,7 +231,7 @@ angular.module('itsApp')
             data: { test: 'test' }
             }
             console.log(req);
-            $http(req).then(function(){console.log('Programarea a fost efectuată cu succes, în câteva minute un membru al echipei vă v-a contacta pentru confirmarea programării\n'); $scope.getEvents();}, function(){alert('NO POST')});
+            $http(req).then(function(){alert('Programarea a fost efectuată cu succes, în câteva minute un membru al echipei vă v-a contacta pentru confirmarea programării\n'); $scope.getEvents();}, function(){alert('NO POST')});
             
         }
         else if($scope.start == 'null') alert('Alege o zi și o oră');

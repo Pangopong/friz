@@ -21,6 +21,12 @@
 	width: 75%;
 	left: 120px;
 }
+#section3 #question{
+	position: absolute; 
+	top: 30px; 
+	left: 94%; 
+	width: 25px;
+}
 #section3 #question:hover{
 	cursor: help;
 }
