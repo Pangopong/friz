@@ -49,6 +49,8 @@ angular.module('itsApp')
         eventColor: '#378006',
         displayEventTime: false,
         dayClick: function(date, jsEvent, view) {
+        //delete default id enabling backend autoUniqueIdentification
+        delete $scope.dat._id;
 
         $scope.dat.start = date.format('');
         $scope.dat.end = moment($scope.dat.start).add(30, 'minutes').format('Y-MM-DDTHH:mm:ss');
@@ -171,7 +173,10 @@ angular.module('itsApp')
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
     $scope.jsonator = [];
-    $scope.dat = {};
+    $scope.dat = {start: "2016-04-24T10:00:00",
+                    end: "2016-04-24T10:30:00",
+                    _id:"0"
+                };  
 
     var programat = 0;
 
