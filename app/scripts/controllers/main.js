@@ -8,12 +8,6 @@
  * Controller of the itsApp
  */
 
-    var rm = function(ctr){
-        angular.element("form").scope().control = ctr;
-        angular.element("form").scope().rmToken = 1;
-        angular.element("form").scope().programare();
-        angular.element("form").scope().control = 'null';
-    }
 
 
 angular.module('itsApp')
@@ -56,9 +50,9 @@ angular.module('itsApp')
         displayEventTime: false,
         dayClick: function(date, jsEvent, view) {
 
-        $scope.start = date.format('');
-        $scope.end = moment($scope.start).add(30, 'minutes').format('Y-MM-DDTHH:mm:ss');
-        console.log($scope.start + '-' +$scope.end);
+        $scope.dat.start = date.format('');
+        $scope.dat.end = moment($scope.dat.start).add(30, 'minutes').format('Y-MM-DDTHH:mm:ss');
+        console.log($scope.dat.start + '-' +$scope.dat.end);
 
         },
         events: $scope.jsonator
@@ -175,32 +169,25 @@ angular.module('itsApp')
 
     //BACKEND
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
-    
-    $scope.jsonator = [];
-    
 
-    $scope.title = '';
-    $scope.start = 'null';
-    $scope.end = 'null';
-    $scope.email = '';
-    $scope.phone = '';
-    $scope.name = '';
-    $scope.control = 'null';
+    $scope.jsonator = [];
+    $scope.dat = {};
+
     var programat = 0;
+
     $scope.tuns = function(ser){
-        $scope.title = ser;
-        console.log($scope.title);
+        $scope.dat.title = ser;
+        console.log($scope.dat.title);
     }
 
     $scope.anulare = function(){
-        rm('del');
         $('#anulare').prop('disabled', true);
     }
 
     $scope.getEvents = function(){
         $http({
             method: 'GET',
-            url: 'http://139.59.136.223:3000'
+            url: 'http://localhost:3000'
         }).then(function successCallback(response) {
 
             $scope.jsonator = response.data;
@@ -216,6 +203,19 @@ angular.module('itsApp')
         });
     }
 
+    $scope.programare = function(){
+
+            var req = {
+            method: 'POST',
+            url: 'http://localhost:3000',
+            data: $scope.dat
+            }
+            console.log(req.data);
+            $http(req).then(function(){console.log('Blanao'); $scope.getEvents();}, function(){console.log('NO POST')});
+
+    }
+
+    /*
     $scope.programare = function(){
 
         if(($scope.phone != '' && $scope.start != 'null' && programat == 0) || $scope.rmToken == 1){
@@ -238,7 +238,7 @@ angular.module('itsApp')
         }
         else if($scope.start == 'null') alert('Alege o zi și o oră');
         else if(programat) alert('Limita de programări atinsă, pentru anulare puteți să folosiți butonul adiacent ultimului buton apăsat');
-    }
+    }*/
 
 
 

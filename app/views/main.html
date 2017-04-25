@@ -211,9 +211,9 @@
 
   <div class="col-sm-6">
   <form>
-  <label>Nume:</label><input type="text" ng-model='name' class="inset" maxlength="50"><br>
-  <label>Telefon:</label><input type='text' ng-model='phone' class="inset" maxlength="15" required><br>
-  <label>Email:</label><input type="text" ng-model='email' maxlength="50" class="inset"><br><br>
+  <label>Nume:</label><input type="text" ng-model='dat.name' class="inset" maxlength="50" required><br>
+  <label>Telefon:</label><input type='text' ng-model='dat.phone' class="inset" maxlength="15" required><br>
+  <label>Email:</label><input type="text" ng-model='dat.email' maxlength="50" class="inset"><br><br>
   <button class='btn-success' id='programare' ng-click='programare()'>Programare!</button>
   <button class="btn-warning" id='anulare' disabled="true" ng-click='anulare()'>Anulare</button>
   </form>
