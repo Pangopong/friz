@@ -187,7 +187,7 @@ angular.module('itsApp')
     $scope.getEvents = function(){
         $http({
             method: 'GET',
-            url: 'http://http://139.59.136.223:3000'
+            url: 'http://139.59.136.223:3000'
         }).then(function successCallback(response) {
 
             $scope.jsonator = response.data;
@@ -207,7 +207,7 @@ angular.module('itsApp')
 
             var req = {
             method: 'POST',
-            url: 'http://http://139.59.136.223:3000',
+            url: 'http://139.59.136.223:3000',
             data: $scope.dat
             }
             console.log(req.data);
