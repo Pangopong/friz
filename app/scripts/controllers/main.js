@@ -19,7 +19,7 @@
 angular.module('itsApp')
   .controller('MainCtrl', function ($scope, $http, $rootScope, $location, $timeout, $window, $anchorScroll) {
     
-    
+        
 
         //$(document).ready(function(){$(window).stellar();});
 
@@ -174,6 +174,8 @@ angular.module('itsApp')
 
 
     //BACKEND
+    $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+    
     $scope.jsonator = [];
     
 
