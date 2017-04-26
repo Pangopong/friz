@@ -175,6 +175,7 @@ angular.module('itsApp')
     $scope.jsonator = [];
     $scope.dat = {start: "2016-04-24T10:00:00",
                     end: "2016-04-24T10:30:00",
+                  title: "TunsClasic",
                     _id:"0"
                 };  
 
