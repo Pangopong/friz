@@ -30,9 +30,23 @@ var updateDocument = function(db, callback) {
    col.save(doc);
 }
 
+var setFind = function(){
+  var d = new Date();
+  var y = d.getFullYear();
+
+  console.log(y)
+  var s = y;
+
+  toFind = {start: s} 
+
+}
+
 var findDocuments = function(db, callback, toFind) {
   // Get the documents collection
   var col = db.collection(toCol);
+  
+  setFind();
+
   // Find some documents
   col.find(toFind).toArray(function(err, docs) {
     assert.equal(err, null);
