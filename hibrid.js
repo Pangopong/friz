@@ -8,6 +8,7 @@ var doc = null;
 var toCol = 'appoints';
 var toFind = {};
 var toDel = null;
+var lastN = 3;
 // Connection URL
 var url = 'mongodb://127.0.0.1:27017/friz';
 
@@ -30,30 +31,22 @@ var updateDocument = function(db, callback) {
    col.save(doc);
 }
 
-var setFind = function(){
-  var d = new Date();
-  var y = d.getFullYear();
-
-  console.log(y)
-  var s = y;
-
-  toFind = {start: s} 
-
-}
-
 var findDocuments = function(db, callback, toFind) {
   // Get the documents collection
   var col = db.collection(toCol);
-  
-  setFind();
 
-  // Find some documents
-  col.find(toFind).toArray(function(err, docs) {
-    assert.equal(err, null);
-    console.log("Found the following records");
-    console.log(docs)
-    callback(docs);
+  var n = 0;
+  col.count(function(err, N){
+      n = N - lastN;
+    // Find some documents
+      col.find(toFind, {skip: n}).toArray(function(err, docs) {
+        assert.equal(err, null);
+        console.log("Found the following records");
+        console.log(docs)
+        callback(docs);
+      });
   });
+  
 }
 
 
@@ -88,8 +81,6 @@ app.post("/",function(req, res) {
   res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS')
   res.header('Access-Control-Allow-Headers', 'Content-Type')
   res.send("Am primit")
-  console.log('REQUEST\n');
-  console.log(req.body);
   //eliminarea rahaturilor din {'{test:'test'}':''}, că așa le-am primit
   doc = JSON.stringify(req.body);
   doc = doc.slice(2, doc.length - 5);
