@@ -8,7 +8,7 @@ var doc = null;
 var toCol = 'appoints';
 var toFind = {};
 var toDel = null;
-var lastN = 3;
+var lastN = 350; //308
 // Connection URL
 var url = 'mongodb://127.0.0.1:27017/friz';
 
@@ -46,7 +46,7 @@ var findDocuments = function(db, callback, toFind) {
         callback(docs);
       });
   });
-  
+
 }
 
 
