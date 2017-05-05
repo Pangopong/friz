@@ -37,6 +37,8 @@ var findDocuments = function(db, callback, toFind) {
 
   var n = 0;
   col.count(function(err, N){
+      if(N >= 350) lastN = 350;
+      else lastN = N;
       n = N - lastN;
     // Find some documents
       col.find(toFind, {skip: n}).toArray(function(err, docs) {
