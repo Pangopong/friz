@@ -19,13 +19,7 @@ app.use(bodyParser.json());
 var updateDocument = function(db, callback) {
   // Get the documents collection
   var col = db.collection(toCol);
-  /*
-  col.update(doc, doc, {upsert: true}, function(err, result) {
-        assert.equal(err, null);
-        assert.equal(1, result.result.n);
-        console.log("Updated the document");
-        callback(result);
-  });  */
+  
   //if(toDel == 1) col.remove({work: doc.work});
 
    col.save(doc);
