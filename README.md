@@ -1,4 +1,5 @@
 # Frizeria Mica
+www.frizeriamica.ro, a website for a local barber shop with a custom booking application and database.
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
