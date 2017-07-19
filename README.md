@@ -4,8 +4,8 @@ This project is generated with [yo angular generator](https://github.com/yeoman/
 version 0.15.1.
 
 ## Dependencies
-npm install
-bower install
+`npm install`\n
+`bower install`
 
 ## Build & development
 Run node hybrid.js to start the backend server 
