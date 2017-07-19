@@ -8,7 +8,7 @@ version 0.15.1.
 `bower install`
 
 ## Build & development
-Run node hybrid.js to start the backend server 
+Run node hibrid.js to start the backend server <br>
 Run `grunt` for building and `grunt serve` for preview.
 
 ## Hibrid.js
