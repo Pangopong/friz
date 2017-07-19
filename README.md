@@ -6,6 +6,8 @@ version 0.15.1.
 
 ## Dependencies
 `npm install`<br>
+    "express": "^4.15.2",<br>
+    "mongodb": "^2.2.26"<br>
 `bower install`<br>
 "angular": "~1.5.8",<br>
     "bootstrap": "^3.2.0",<br>
