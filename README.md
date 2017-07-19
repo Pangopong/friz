@@ -17,7 +17,7 @@ version 0.15.1.
 
 
 ## Build & development
-Run node hibrid.js to start the backend server <br>
+Run `node hibrid.js` to start the backend server <br>
 Run `grunt` for building and `grunt serve` for preview.
 
 ## Hibrid.js
