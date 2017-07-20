@@ -12,14 +12,14 @@
 
 angular.module('itsApp')
   .controller('MainCtrl', function ($scope, $http, $rootScope, $location, $timeout, $window, $anchorScroll) {
-    
-        
+
+
 
         //$(document).ready(function(){$(window).stellar();});
 
 
         $scope.viewTransition = function(loc){
-    	
+
     	$rootScope.squash = "squash";
         $rootScope.shadow = "none";
         function changeView(){$location.path(loc);}
@@ -60,7 +60,7 @@ angular.module('itsApp')
         events: $scope.jsonator
 
     });
-        
+
         $("#owl-ban").owlCarousel({
 
             navigation : false, // Show next and prev buttons
@@ -83,10 +83,10 @@ angular.module('itsApp')
     });
 
 
-    //carousel 
+    //carousel
     $scope.cbtn = function(btn){
-      
-      
+
+
 
         console.log('btn: ' + btn + ' pressed');
         if(btn == 1){
@@ -101,42 +101,42 @@ angular.module('itsApp')
             $("#detail").collapse('hide');
             $("#detail2").collapse('hide');
         }
-    }	
-   
+    }
+
    //scroll()
    $scope.scroll = function(targetId, delay){
 
     $timeout(function(){$("body, html").animate({scrollTop: $(targetId).offset().top}, "slow");}, delay);
     console.log('button pressed');
    }
-       
+
     AOS.init({duration: 3000});
     $timeout(AOS.refresh,500);
 
 
     //navbar scrollfix
     $(document).ready(function() {
-                
+
         $('body, html').animate({scrollTop: 1}, 'slow');
         console.log('navbar position: ' + $('.navbar').position().top);
         var oldPoz = $('.navbar').position().top;
 
         var oldPozOffset = oldPoz + 50;
-        
+
         $(window).scroll(function () {
 
             var section1 = $('#section1').position().top;
             var section3 = $('#section3').position().top - 50;
 
             if ($(window).scrollTop() >= oldPoz) {
-                
+
                 $('.navbar').css({'position': 'fixed', 'top': '0', 'background-color': 'rgba(0,0,0,0)'});
-                                
+
             }
 
             if ($(window).scrollTop() < oldPoz) {
                  $('.navbar').css({'position':'relative', 'top': '-100', 'background-color': 'black'});
-                  
+
             }
 
 
@@ -177,7 +177,7 @@ angular.module('itsApp')
                     end: "2016-04-24T10:30:00",
                   title: "TunsClasic",
                     _id:"0"
-                };  
+                };
 
     var programat = 0;
 
@@ -198,10 +198,10 @@ angular.module('itsApp')
 
             $scope.jsonator = response.data;
             console.log($scope.jsonator);
-             
+
             $('#calendar').fullCalendar('removeEvents');
             $('#calendar').fullCalendar('addEventSource', $scope.jsonator);
-            
+
 
         }, function errorCallback(response) {
 
@@ -240,7 +240,7 @@ angular.module('itsApp')
             }
             console.log(req);
             $http(req).then(function(){alert('Programarea a fost efectuată cu succes, în câteva minute un membru al echipei vă v-a contacta pentru confirmarea programării\n'); $scope.getEvents();}, function(){alert('NO POST')});
-            
+
         }
         else if($scope.start == 'null') alert('Alege o zi și o oră');
         else if(programat) alert('Limita de programări atinsă, pentru anulare puteți să folosiți butonul adiacent ultimului buton apăsat');
