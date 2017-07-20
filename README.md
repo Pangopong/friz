@@ -1,6 +1,6 @@
 # Frizeria Mica
 www.frizeriamica.ro, a website for a local barber shop with a custom booking application and database.
-The website and database are hosted on a DigitalOcean Ubuntu(x64) VPS Droplet.
+The website and database are hosted on a DigitalOcean Ubuntu(x64) VPS Droplet via `nginx`.
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
